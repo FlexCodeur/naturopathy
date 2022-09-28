@@ -1,0 +1,4 @@
+{% set category_show = path('app_category_show', {'slug': category.slug}) %}
+<li>
+    <a class="nav__bar--link" href="{{category_show}}">{{ category.label }}</a>
+</li>

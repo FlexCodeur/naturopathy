@@ -1,0 +1,65 @@
+.logo-custom {
+  text-align: center;
+  img {
+    display: block;
+    margin: auto;
+  }
+}
+
+.sidebar {
+  background: $dark;
+}
+
+.logo-custom,
+.menu-item-label,
+{
+  color: $white;
+}
+
+#main-menu {
+  .menu {
+    .menu-icon {
+      color: $white;
+    }
+    .menu-item {
+      &.active {
+        background: #000;
+      }
+      .submenu-toggle {
+        .submenu-toggle-icon {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background: #000;
+  &:hover {
+    background: #1f1f1f;
+  }
+}
+
+.page-item.active {
+  background: whitesmoke;
+  .page-link {
+    border: #000;
+    background: #000;
+    &:hover {
+      background: #1f1f1f;
+    }
+  }
+}
+
+.datagrid{
+  td.actions {
+    .action-edit {
+      .action-label {
+       &:hover {
+         color: $green;
+       }
+      }
+    }
+  }
+}

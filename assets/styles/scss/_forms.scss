@@ -1,0 +1,103 @@
+//Form form Style
+.form {
+  padding-bottom: 160px;
+  @include respond('laptop') {
+    padding-bottom: 100px;
+  }
+  @include respond('tabLand') {
+    padding-bottom: 80px;
+  }
+  @include respond('tabPort') {
+    padding-bottom: 60px;
+  }
+  @include respond('mobileLarge') {
+    padding-bottom: 30px;
+  }
+  h1 {
+    margin: 60px 0;
+    @include respond('tabPort') {
+      margin: 40px 0;
+      font-size: 16px;
+    }
+  }
+  &__content {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    width: 50%;
+    margin: $mxAuto;
+    padding: 50px;
+    @include respond('mobileLarge') {
+      padding: 30px;
+      width: 70%;
+    }
+    &--input {
+      @include flex(center, center, column);
+      &>input {
+        font-size: 20px;
+        border: none;
+        border-bottom: $borderSolidDark;
+        border-radius: 5px;
+        height: 50px;
+        width: 100%;
+        @include respond('tabPort') {
+          font-size: 16px;
+        }
+        @include respond('mobileLarge') {
+          font-size: 14px;
+        }
+        &:focus {
+          background: $bgformElements;
+          outline: none;
+        }
+        &:not(:last-child) {
+          margin-bottom: 35px;
+          @include respond('mobileLarge') {
+            margin-bottom: 20px;
+          }
+        }
+        &::placeholder {
+          opacity: 60%;
+          border-radius: 5px;
+          padding: 15px 10px 10px 10px;
+          height: 50px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+//Forms messages style
+.alerte__message {
+  color: $red;
+  &>ul {
+    align-self: flex-start;
+  }
+}
+
+.succes__message {
+  color: $primaryColor;
+}
+
+#registration_form_agreeTerms {
+  appearance: none;
+  border: 1px solid $green;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  @include respond('tabPort') {
+    padding: 6px;
+  }
+
+  &:checked {
+    background-color: $green;
+  }
+}
+
+.reset_password_message_before_submit {
+  padding: 15px 0;
+  @include respond('tabPort') {
+    font-size: 12px;
+    text-align: center;
+  }
+}

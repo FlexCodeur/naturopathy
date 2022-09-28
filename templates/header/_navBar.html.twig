@@ -1,0 +1,22 @@
+    <nav class="main-navigation nav__bar">
+       <div class="menu-menu-header-container" id="navbarNavDropdown">
+             <ul class="navbar-nav menu">
+                <li class="nav-item">
+                    <a class="nav__bar--link" href="{{ path ('home') }}">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav__bar--link" href="{{ path ('who_iam') }}">Qui suis-je</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav__bar--link" href="{{ path ('naturopathy') }}">La naturopathie</a>
+                </li class="nav-item">
+                    {% include 'category/_categoriesWidegtsItems.html.twig' %}
+                <li class="nav-item">
+                    <a class="nav__bar--link" href="{{ path('app_contact') }}">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <span class="close_menu_burger">
+			<i class="fa-solid fa-xmark"></i>
+		</span>
+    </nav>

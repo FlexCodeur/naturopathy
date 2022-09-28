@@ -1,0 +1,96 @@
+.category__banner {
+  position: relative;
+  margin-bottom: 120px;
+  @include respond('tabLand') {
+    margin-bottom: 90px;
+  }
+  @include respond('tab') {
+    margin-bottom: 70px;
+  }
+  @include respond('tabPort') {
+    margin-bottom: 60px;
+  }
+  @include respond('mobileLarge') {
+    margin-bottom: 40px;
+  }
+  &--title {
+    position: absolute;
+    font-size: 72px;
+    color: $white;
+    background: rgba(0,0,0, 0.4);
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    padding: 30px 0;
+    transform: translate(-50%, -50%);
+    @include respond('tabLand') {
+      font-size: 60px;
+    }
+    @include respond('tabPort') {
+      font-size: 40px;
+    }
+    @include respond('mobileLarge') {
+      font-size: 25px;
+      padding: 15px 0;
+    }
+  }
+}
+
+//Blog listing stule
+.blog__list {
+  h2 {
+    margin-bottom: 80px;
+    @include respond('tabPort') {
+      margin-bottom: 60px;
+    }
+    @include respond('mobileLarge') {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+//Blog content style
+.article {
+  padding: 0 5%;
+  h1 {
+    margin: 60px 0;
+    @include respond('tabPort') {
+      font-size: 16px;
+      margin: 40px 0;
+    }
+    @include respond('mobileLarge') {
+      font-size: 14px;
+      margin: 30px 0;
+    }
+  }
+  .publishedAt {
+    font-size: 18px;
+    font-weight: 600;
+    color: $green;
+    margin: 0 0 25px 100px;
+    @include respond('tab') {
+      font-size: 14px;
+      margin: 0 15px;
+    }
+    @include respond('tabPort') {
+      font-size: 10px;
+    }
+  }
+}
+.article__flex {
+  @include containerSize(90%, $mxAuto);
+  @extend .who__flex;
+  @include respond('tabLand') {
+    img {
+      order: 1;
+      margin-bottom: 25px;
+      max-width: initial;
+      width: 100%;
+    }
+    .article__flex--content {
+      order: 2;
+    }
+  }
+}

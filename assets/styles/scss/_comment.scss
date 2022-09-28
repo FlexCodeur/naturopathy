@@ -1,0 +1,47 @@
+//Comment form on articles
+.comments {
+  margin-top: 80px;
+  @include respond('tabLand') {
+    margin-top: 60px;
+  }
+  @include respond('tabPort') {
+    margin-top: 40px;
+  }
+  @include respond('mobileLarge') {
+    margin-top: 30px;
+  }
+  h4 {
+    width: 60%;
+    margin: 25px auto;
+    color: $secondaryColor;
+  }
+  .form__content {
+    text-align: left;
+    width: 60%;
+    margin: auto;
+    @include respond('tabPort') {
+      width: 70%;
+    }
+    .user__comment {
+      margin: 0 0 25px;
+      & > p {
+        padding-bottom: 15px;
+        &:not(:last-child) {
+          font-weight: 600;
+        }
+      }
+    }
+    &--input {
+      textarea {
+        @include respond('tabPort') {
+          width: 100%;
+          height: 120px;
+        }
+      }
+    }
+  }
+}
+
+#comment_publier {
+  margin-top: 25px;
+}

@@ -1,0 +1,9 @@
+{% for message in app.flashes('success') %}
+    <div class="flash_content">
+        <div class="flash_success">{{ message }}
+            <span class="close_message cursor_pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,19 @@
+.nav__bar {
+  font-size: 24px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px;
+  background: $primaryColor;
+  &>ul {
+    width: 80%;
+    margin: $mAuto;
+    @include flex(space-evenly, center);
+  }
+}
+
+.dropdown-item {
+  a {
+    color: #323232;
+  }
+}

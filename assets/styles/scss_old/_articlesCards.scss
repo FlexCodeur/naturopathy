@@ -1,0 +1,106 @@
+// Article section
+.blog__content {
+  .blog__content--cards {
+    @include flex(space-between, stretch, $wrap: wrap);
+  }
+}
+.actualites {
+  border: $borderSolidDark;
+  margin: 0 20px 40px;
+  padding: 0 0 40px;
+  width: 30%;
+  @include respond("mobileLarge") {
+    width: 100%;
+    margin: 0;
+  }
+  @include respond("tabPort") {
+    width: 100%;
+    margin: 0;
+  }
+  @include respond("tab") {
+    width: 100%;
+    margin: 0;
+  }
+  @include respond("tabLand") {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @include respond("laptop") {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .news_items {
+    &:not(:last-child) {
+      margin-right: 40px;
+      @include respond("mobileLarge") {
+        margin: 0 auto 40px;
+      }
+      @include respond("mobileLarge") {
+        margin: 0 auto 40px;
+      }
+      @include respond("tab") {
+        margin: 0 auto 40px;
+      }
+      @include respond("tabLand") {
+        margin: 0 auto 40px;
+      }
+    }
+    img {
+      width: 100%;
+      display: block;
+      margin: $mxAuto;
+    }
+    .news_item_content {
+      padding: 35px 25px;
+      line-height: 34px;
+      .date_news {
+        font-size: 20px;
+        color: $primaryColor;
+        font-weight: 600;
+        padding: 35px 0;
+
+        @include respond("mobileLarge") {
+          font-size: 14px;
+        }
+      }
+      .comments {
+        margin-top: 25px;
+        @include respond('mobileLarge') {
+          font-size: 18px;
+        }
+        @include respond('tabPort') {
+          font-size: 22px;
+        }
+        a {
+          color: #323232;
+        }
+      }
+      .titleH3 {
+        color: $secondaryColor;
+        padding-bottom: 20px;
+        @include font("JOST_R", 32);
+        @include respond('mobileLarge') {
+          font-size: 26px;
+        }
+        @include respond('mobileLarge') {
+          font-size: 28px;
+        }
+      }
+      & > p {
+        font-size: 32px;
+        @include respond('mobileLarge') {
+          font-size: 18px;
+        }
+        @include respond('tabPort') {
+          font-size: 22px;
+        }
+      }
+      & div {
+        font-size: 28px;
+        @include respond('mobileLarge') {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

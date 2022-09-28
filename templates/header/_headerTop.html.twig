@@ -1,0 +1,67 @@
+{#Header top template#}
+    <div class="header__top">
+        <a href="{{ path ('home') }}"><img src="{{ asset ('build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png') }}" alt="Nicolas Guidoux Naturopathe Iridologue logo"></a>
+        <div class="header__top--content">
+            <div class="header__items">
+                <span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-location-dot fa-stack-1x fa-inverse"></i>
+                </span>
+                <div class="header__items--content" id="address_header">
+                    <p class="header__items--title">Le Cabinet</p>
+                    <p>39 rue du Président Coty</p>
+                    <p>33440 Ambarès-et-Lagrave</p>
+                </div>
+            </div>
+            <div class="header__items">
+                <span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-phone-volume fa-stack-1x fa-inverse"></i>
+                </span>
+                <div class="header__items--content" id="contact_header">
+                    <p class="header__items--title">Contactez-moi</p>
+                    <a href="tel:0645675988">06 45 67 59 88</a>
+                    <a href="mailto:guidoux.nicolas@gmail.com">guidoux.nicolas@gmail.com</a>
+                </div>
+            </div>
+            <div class="header__items nav-item dropdown">
+                <span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-user fa-stack-1x fa-inverse"></i>
+                </span>
+                <p class="header__items--connect">Mon compte</p>
+
+                <ul class="dropdown_menu">
+                    {% if app.user %}
+                        {% if is_granted('ROLE_EDITOR')%}
+                            <li>
+                                <a class="dropdown_item" href="{{ path('admin') }}" target="_blank">Tableau de bord</a>
+                            </li>
+                        {% endif %}
+                        <li>
+                            <div class="dropdown_item">
+                                <a href="{{ path('app_logout') }}" class="header__items--title">déconnexion</a>
+                            </div>
+                        </li>
+                    {% else %}
+                        <li>
+                            <div class="header__items--content dropdown-item">
+                                <a href="{{ path('app_login') }}" class="header__items--title">Connexion</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="header__items--content dropdown-item">
+                                <a href="{{ path('app_register') }}" class="header__items--title">Inscription</a>
+                            </div>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            <div class="header__items--mobile">
+                <span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fa-solid fa-bars fa-stack-1x fa-inverse"></i>
+                </span>
+            </div>
+        </div>
+    </div>

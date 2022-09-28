@@ -1,0 +1,70 @@
+// MENTIONS LEGALES
+.mentions {
+  @include containerSize(80%, $mxAuto);
+  & > h1 {
+    margin-top: 80px;
+    @include respond('tabPort') {
+      margin-top: 40px;
+    }
+  }
+  & > h2 {
+    padding: 100px 0 30px 50px;
+    @include respond("mobile") {
+      font-size: 26px;
+      padding: 15px;
+    }
+    @include respond("tab") {
+      font-size: 30px;
+      padding: 15px;
+    }
+    @include respond("tabLand") {
+      font-size: 34px;
+      padding: 15px;
+    }
+    @include respond("laptop") {
+      font-size: 38px;
+    }
+  }
+  & > p {
+    font-size: 32px;
+    line-height: 38px;
+    word-spacing: 1px;
+    padding-left: 50px;
+
+    &:last-child {
+      padding-bottom: 200px;
+    }
+    @include respond("mobile") {
+      font-size: 18px;
+      padding: 15px;
+    }
+    @include respond("tab") {
+      font-size: 24px;
+      padding: 15px;
+    }
+    @include respond("tabLand") {
+      font-size: 26px;
+      padding: 15px;
+      @include respond("laptop") {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+//privacy policy
+.privacy_page {
+  padding: 0 5% ;
+  font-size: 20px;
+  @include respond('tabPort') {
+    font-size: 16px;
+  }
+
+  h1 {
+    margin: 80px 0;
+
+    @include respond('tabPort') {
+      margin: 40px 0;
+    }
+  }
+}

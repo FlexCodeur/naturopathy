@@ -1,0 +1,429 @@
+body {
+  color: $fontColor;
+}
+strong {
+  font-weight: 700;
+}
+main {
+  @include respond('tabPort') {
+    margin-top: 94px;
+  }
+  @include respond('mobileLarge') {
+    margin-top: 74px;
+  }
+}
+
+.title {
+  font-family: "JOST_R", serif;
+  font-size: 40px;
+  @include respond("large") {
+    font-size: 25px;
+  }
+  @include respond("mobile") {
+    font-size: 22px;
+  }
+  @include respond("mobileSmall") {
+    font-size: 18px;
+  }
+}
+
+.titleH1 {
+  font-family: "JOST_R", serif;
+  font-size: 48px;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  @include respond("large") {
+    font-size: 38px;
+  }
+  @include respond("laptopExtra") {
+    font-size: 35px;
+  }
+  @include respond("laptop") {
+    font-size: 30px;
+  }
+  @include respond("tabPort") {
+    font-size: 25px;
+  }
+  @include respond("tabPort") {
+    font-size: 20px;
+  }
+  &::before {
+    content: "";
+    background-color: $secondaryColor;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+
+.titleH2 {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    background-color: $secondaryColor;
+    height: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 5px;
+  }
+  @include respond("large") {
+    font-size: 38px;
+  }
+  @include respond("laptopExtra") {
+    font-size: 35px;
+  }
+  @include respond("laptop") {
+    font-size: 30px;
+  }
+  @include respond("tabPort") {
+    font-size: 25px;
+  }
+  @include respond("tabPort") {
+    font-size: 20px;
+  }
+  @include respond("mobileLarge") {
+    font-size: 17px;
+  }
+}
+
+.titleH2,
+.titleH3,
+.titleH4,
+.titleH5 {
+  font-family: "AVE_M", serif;
+  text-transform: uppercase;
+}
+
+// Colors class
+.green {
+  color: $green;
+}
+
+.orange {
+  color: $secondaryColor;
+}
+.primary_color {
+  color: $primaryColor;
+}
+
+.red {
+  color: red;
+}
+
+// Override FontAwesome
+.fa-stack {
+  color: $primaryColor;
+}
+
+.btn_secondary {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  border: 3px solid transparent;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  @include btnColors(false);
+  @include respond("large") {
+    line-height: 38px;
+  }
+  @include respond("mobile") {
+    line-height: 25px;
+    padding: 0 15px;
+  }
+  transition: all 0.4s ease;
+  &:hover {
+    background: transparent;
+    color: $secondaryColor;
+    border: 3px solid $secondaryColor;
+  }
+}
+
+.btn_primary {
+  display: inline-block;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  border: 3px solid transparent;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  @include btnColors(true);
+  transition: all 0.4s ease;
+  @include respond("large") {
+    line-height: 38px;
+  }
+  @include respond("mobile") {
+    line-height: 25px;
+    padding: 0 15px;
+  }
+  &:hover {
+    background: transparent;
+    color: $green;
+    border: 3px solid $green;
+  }
+}
+
+.btn_green {
+  display: inline-block;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  line-height: 38px;
+  padding: 0 20px;
+  border: 3px solid transparent;
+  background-color: $primaryColor;
+  transition: all 0.4s ease;
+  @include respond("large") {
+    line-height: 38px;
+  }
+  @include respond("mobileLarge") {
+    line-height: 20px;
+    padding: 0 15px;
+  }
+  &:hover {
+    background: transparent;
+    color: $primaryColor;
+    border: 3px solid $primaryColor;
+  }
+}
+
+// class author citations
+.author {
+  position: relative;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 300;
+  text-align: right;
+  padding: 20px 0;
+  &:after {
+    content: "\f10e";
+    font-family: "FontAwesome";
+    font-size: 30px;
+    position: absolute;
+    bottom: -50px;
+    right: -35px;
+    color: $sand;
+  }
+  @include respond("large") {
+    font-size: 16px;
+  }
+  @include respond("mobile") {
+    font-size: 14px;
+  }
+  @include respond("mobileSmall") {
+    font-size: 12px;
+  }
+}
+
+.btn_text {
+  font-size: 18px;
+  @include respond("large") {
+    font-size: 16px;
+  }
+  @include respond('tabPort') {
+    white-space: nowrap;
+    margin-top: 15px;
+  }
+  @include respond('mobileLarge') {
+    font-size: 14px;
+  }
+  @include respond("mobile") {
+    font-size: 12px;
+  }
+}
+
+// Pathology List-Style
+.row_list {
+  position: relative;
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 55px 0 25px;
+  &:before {
+    content: "\f0a9";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: $green;
+    left: -50px;
+    @include respond("tabPort") {
+      left: -25px;
+    }
+  }
+  @include respond("laptop") {
+    font-size: 22px;
+  }
+  @include respond("tabLand") {
+    font-size: 18px;
+    margin: 30px 0 15px;
+  }
+  @include respond("tabPort") {
+    font-size: 17px;
+    white-space: nowrap;
+  }
+}
+
+.list_type {
+  margin-bottom: 15px;
+  @include respond("tabPort") {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  &:before {
+    content: "\f138";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: $secondaryColor;
+    left: -50px;
+    @include respond("tabPort") {
+      left: -20px;
+    }
+  }
+}
+
+
+.fa-2x {
+  font-size: 1.5em!important;
+  @include respond('tabLand') {
+    font-size: 1.5em!important;
+  }
+  @include respond('tabPort') {
+    font-size: 1.3em!important;
+  }
+}
+
+.cursor_pointer {
+  cursor: pointer;
+}
+
+.checkboxes {
+  appearance: none;
+  border: 1px solid $green;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+  @include respond('tabPort') {
+    padding: 6px;
+  }
+
+  &:checked {
+    background-color: $green;
+  }
+}
+
+.flash_success {
+  position: relative;
+  background-color: $flash_success;
+  color: green;
+  padding: 15px 35px;
+  &:before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-size: 14px;
+    margin-right: 15px;
+  }
+}
+
+.flash_warning {
+  background-color: $flash_warning;
+  color: darkorange;
+  padding: 15px 35px;
+  &:before {
+    content: "\f071";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    margin-right: 15px;
+  }
+}
+
+.flash_alert {
+  background-color: $flash_alert;
+  color: red;
+  padding: 15px 35px;
+  &:before {
+    content: "\f057";
+    font-family: "FontAwesome";
+    font-size: 14px;
+    margin-right: 15px;
+  }
+}
+
+.close_message {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+}
+
+.flash_content{
+  &.hide {
+    display: none;
+  }
+}
+
+.message_password {
+  padding: 40px;
+  line-height: 18px;
+  font-size: 22px;
+  &>p:last-child{
+    padding-top: 15px;
+  }
+  @include respond('tabPort') {
+    padding: 40px 15px;
+    font-size: 16px;
+  }
+}
+.pagination{
+  @include flex(center, center);
+  .pagination-previous{
+    margin-right: 15px;
+    order: 1;
+  }
+  .pagination-next{
+    order: 3;
+  }
+  .pagination-list {
+    order: 2;
+    @include flex(center, center);
+    .pagination-link {
+      padding: 0 8px;
+      border-radius: 5px;
+      margin-right: 15px;
+      font-weight: 600;
+      &:hover {
+        background-color: $secondaryColor;
+        color: white;
+      }
+      &.is-current {
+        cursor: initial;
+        background-color: $primaryColor;
+        color: white;
+    }
+  }
+}
+
+}
+

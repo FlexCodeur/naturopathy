@@ -1,0 +1,89 @@
+.header__top {
+  @include respond("tabPort") {
+    border-bottom: 1px solid rgba(68, 98, 55, 0.4);
+  }
+}
+
+.main-navigation {
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 5px;
+  background: $primaryColor;
+  @include respond("large") {
+    font-size: 13px;
+    padding: 2px;
+  }
+  @include respond("tabPort") {
+    position: fixed;
+    right: -400px;
+    font-size: 18px;
+    height: 100vh;
+    z-index: 2000;
+    transition: all 600ms ease;
+    top: 0;
+  }
+  @include respond("mobileLarge") {
+    font-size: 16px;
+  }
+  .menu-menu-header-container {
+    @include respond("tabPort") {
+      padding: 60px;
+      position: relative;
+    }
+  }
+  & .menu {
+    width: 80%;
+    margin: $mAuto;
+    padding: 20px;
+    @include flex(space-evenly, center);
+    @include respond("tabPort") {
+      flex-direction: column;
+      white-space: nowrap;
+    }
+    & > li {
+      @include respond("tabPort") {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &.show_menu {
+    transition: all 600ms ease;
+    @include respond("tabPort") {
+      display: block;
+      right: 0;
+      width: 100%;
+    }
+  }
+}
+.close_menu_burger {
+  display: none;
+  @include respond("tabPort") {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+  }
+  @include respond('mobileLarge') {
+    top: 30px;
+  }
+  @include respond('mobile') {
+    top: 15px;
+  }
+}
+
+.current_item_active {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $secondaryColor;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+  }
+}

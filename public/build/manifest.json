@@ -1,0 +1,13 @@
+{
+  "build/assets/app.css": "/build/assets/css/app.css",
+  "build/assets/app.js": "/build/assets/js/app.js",
+  "build/assets/runtime.js": "/build/assets/js/runtime.js",
+  "build/assets/js/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js": "/build/assets/js/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_core-js_modules_es_ob-7db861.js",
+  "build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png": "/build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png",
+  "build/assets/fonts/Jost-SemiBold.ttf": "/build/assets/fonts/Jost-SemiBold.2341b2a2.ttf",
+  "build/assets/fonts/Jost-Light.ttf": "/build/assets/fonts/Jost-Light.5aad24e1.ttf",
+  "build/assets/fonts/Jost-Regular.ttf": "/build/assets/fonts/Jost-Regular.d4084cb4.ttf",
+  "build/assets/fonts/AvenirLTStd-Black.ttf": "/build/assets/fonts/AvenirLTStd-Black.7ce894e1.ttf",
+  "build/assets/fonts/AvenirLTStd-Book.ttf": "/build/assets/fonts/AvenirLTStd-Book.813557df.ttf",
+  "build/assets/fonts/AvenirLTStd-Roman.ttf": "/build/assets/fonts/AvenirLTStd-Roman.0bfb049d.ttf"
+}

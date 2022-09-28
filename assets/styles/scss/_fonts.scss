@@ -1,0 +1,9 @@
+// FONT JOST
+@include font-face("JOST_L", "Jost-Light", 300);
+@include font-face("JOST_R", "Jost-Regular", 400);
+@include font-face("JOST_SB", "Jost-SemiBold", 600);
+
+//FONT AVENIR
+@include font-face("AVE_M", "AvenirLTStd-Roman", 500);
+@include font-face("AVE_R", "AvenirLTStd-Book", 400);
+@include font-face("AVE_B", "AvenirLTStd-Black", 600);

@@ -1,0 +1,29 @@
+.navbar-toggler {
+  color: transparent;
+  position: absolute;
+  right: 10px;
+  top: -20px;
+  .navbar-toggler-icon {
+  }
+}
+
+.container-fluid {
+  @include respond('tab') {
+    position: relative;
+  }
+}
+
+.nav__bar {
+  @include respond('tab') {
+    padding: 40px;
+  }
+  & > ul {
+    & > li {
+      @include respond('tab') {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+

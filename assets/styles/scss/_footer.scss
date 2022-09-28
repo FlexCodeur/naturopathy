@@ -1,0 +1,176 @@
+.footer__top {
+  padding: 40px 0;
+  @include flex(space-evenly, center);
+  @include respond("tab") {
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 40px 25px;
+  }
+  & > img {
+    width: 250px;
+    @include respond("tab") {
+      width: 200px;
+      padding-bottom: 20px;
+    }
+    @include respond("mobile") {
+      width: 170px;
+      padding-bottom: 20px;
+    }
+    @include respond("mobileSmall") {
+      width: 140px;
+      padding-bottom: 20px;
+    }
+    &:nth-child(3) {
+      max-width: 100px;
+    }
+  }
+}
+
+#footer-menu {
+  & .menu-item.current-menu-item {
+    font-weight: 700;
+    &::after {
+      background-color: transparent;
+    }
+  }
+}
+
+.footer__container {
+  color: white;
+  background: $primaryColor;
+  padding: 90px;
+  @include flex(space-evenly, flex-start);
+  @include respond('tab') {
+    padding: 60px;
+  }
+  @include respond("tabPort") {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 60px;
+  }
+  &--items {
+    font-size: 22px;
+    @include respond("tab") {
+      font-size: 16px;
+    }
+    @include respond("tabPort") {
+      font-size: 14px;
+    }
+    .social_title {
+      text-align: center;
+      @include respond("tab") {
+        text-align: left;
+      }
+    }
+    & > h4 {
+      font-weight: 600;
+      margin-bottom: 20px;
+      @include respond("tab") {
+        padding-top: 30px;
+      }
+    }
+    & > ul > li {
+      padding-bottom: 15px;
+      @include respond("tab") {
+        margin-right: 30px;
+      }
+      @include respond("tabPort") {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(3) {
+      align-self: flex-start;
+      & > .social_link {
+        @include flex(space-evenly, center);
+        &>li>a>i {
+          @include respond('tab') {
+            font-size: 30px!important;
+          }
+        }
+        & > li:not(:last-child) {
+          margin-right: 25px;
+        }
+      }
+    }
+    & > div {
+      & > ul > li {
+        padding-bottom: 15px;
+        @include respond("tab") {
+          margin-right: 30px;
+        }
+        @include respond("tabPort") {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-linkedin {
+  font-size: 35px;
+  @include respond("mobileLarge") {
+    font-size: 50px;
+  }
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+}
+
+.copyright {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background: $dark;
+  @include respond("tabLand") {
+    font-size: 18px;
+  }
+  @include respond("tab") {
+    font-size: 14px;
+  }
+  @include respond("mobile") {
+    font-size: 8px;
+  }
+}
+
+#backToTop {
+  background-color: $secondaryColor;
+  color: white;
+  @include flex(center, center);
+  position: fixed;
+  bottom: 10%;
+  right: 20px;
+  z-index: 1000;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding: 5px;
+  transition: all 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+  @include respond('tabPort') {
+    height: 25px;
+    width: 25px;
+  }
+  &:after {
+    content: "\f062";
+    @include font("FontAwesome", 24);
+    @include respond(tabPort) {
+      font-size: 20px;
+    }
+  }
+  &:hover {
+    background-color: $white;
+    color: $green;
+    border: 1px solid $green;
+  }
+}
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,30 @@
+.form__content {
+  @include respond('smallLaptop') {
+    width: 70%;
+  }
+  @include respond('extraLarge') {
+    width: 60%;
+  }
+  @include respond('tabPort') {
+    width: 90%;
+  }
+  @include respond('tab') {
+    width: 80%;
+  }
+}
+
+#form__registration {
+  .btn_secondary {
+    @include respond('large') {
+      width: 30%;
+    }
+    @include respond('tabPort') {
+      width: 60%;
+    }
+    @include respond('mobile') {
+      width: 60%;
+    }
+  }
+}
+
+

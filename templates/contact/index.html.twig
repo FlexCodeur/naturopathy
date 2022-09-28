@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    {% include 'flash_message/_flash_success.html.twig' %}
+    <section class="contact">
+        <h1 class="titleH1">Contact</h1>
+        {{form_start(formContact)}}
+            <div class="contactForm">
+                <div class="contactItems">
+                   {{form_row(formContact.lastName)}}
+                   {{form_row(formContact.firstName)}}
+                </div>
+                <div class="contactItems">
+                   {{form_row(formContact.email)}}
+                   {{form_row(formContact.phone)}}
+                </div>
+                <div class="contactItems">
+                    {{form_row(formContact.object)}}
+                </div>
+                <div class="contactItems_textArea">
+                    {{ form_row(formContact.message) }}
+                </div>
+            </div>
+            <div class="rgpd_checkbox">
+                {{form_row(formContact.rgpd)}}
+                <label for="contact_rgpd">J'accepte
+                    <a href="{{ path ('privacy_policy')}}" target="_blank">la politique de confidentialité</a><span class="red"> *</span>
+                </label>
+            </div>
+            <div class="rgpd_checkbox">
+                {{form_row(formContact.agreeTerms)}}
+                <label for="agreeTerms">En soumettant ce formulaire, vous acceptez le traitement des données collectées<span class="red"> *</span></label>
+            </div>
+            {{form_row(formContact.envoyer)}}
+        {{ form_end(formContact) }}
+    </section>
+    <section class="location">
+        <h2 class="titleH2">Coordonnées</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.7590452316226!2d-0.4947729844604355!3d44.928235379098275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552d4b252569e9%3A0x73191fec7e6bb02!2sNicolas%20Guidoux%20Naturopathe%20Iridologue!5e0!3m2!1sfr!2sfr!4v1652999565036!5m2!1sfr!2sfr" width="800" height="860" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="adressCard">
+            <div class="adressCardItems">
+                <p><span>Adresse</span></p>
+                <p>39 rue du Président Coty</p>
+                <p>33440 Ambarès-et-Lagrave</p>
+            </div>
+            <div class="adressCardItems">
+                <p><span>Téléphone</span></p>
+                <p>06 45 67 59 88</p>
+            </div>
+            <div class="adressCardItems">
+                <p><span>Adresse Mail</span></p>
+                <p>guidoux.nicolas@gmail.com</p>
+            </div>
+            <div class="socialIcons">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com/NicolasGuidouxNaturopathe/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/nicolasguidoux_naturopathe/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://fr.linkedin.com/in/nicolas-guidoux-523822a3" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+{% endblock %}

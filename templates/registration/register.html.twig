@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+{% block meta %}
+    <meta name="description" content="Inscrivez-vous sur le site de Nicolas Guidoux Naturopathe à Bordeaux - Ambarès-et-Lagrave et commentez vos articles préférés"/>
+    <meta property="og:title" content= "Inscription"/>
+    <meta property="og:type" content="page" />
+    <meta property="og:url" content=" {{ path ('app_register') }}" />
+    <meta property="og:image" content="{{ asset ('build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png') }}" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue" />
+{% endblock meta %}
+
+{% block body %}
+    <section class="form">
+    <h1 class="titleH1">Inscription</h1>
+        {{ form_start(registrationForm, {'attr': {
+            'class': 'form__content',
+            'id': 'form__registration'
+        }}) }}
+        <div class="form__content--input alerte__message">
+            {{ form_widget(registrationForm.firstName) }}
+            {{ form_errors(registrationForm.firstName) }}
+        </div>
+        <div class="form__content--input alerte__message">
+            {{ form_widget(registrationForm.lastName) }}
+            {{ form_errors(registrationForm.lastName) }}
+        </div>
+        <div class="form__content--input alerte__message">
+            {{ form_widget(registrationForm.username) }}
+            {{ form_errors(registrationForm.username) }}
+        </div>
+        <div class="form__content--input alerte__message">
+            {{ form_widget(registrationForm.email) }}
+            {{ form_errors(registrationForm.email) }}
+        </div>
+            <div class="alerte__message">
+                {{ form_widget(registrationForm.plainPassword) }}
+                {{ form_errors(registrationForm.plainPassword) }}
+
+            </div>
+        <div class="rgpd_checkbox">
+            {{form_row(registrationForm.agreeTerms)}}
+            <label for="agreeTerms">En soumettant ce formulaire, vous acceptez le traitement des données collectées<span class="red"> *</span></label>
+        </div>
+        <div class="rgpd_checkbox">
+            {{form_row(registrationForm.rgpd)}}
+            <label for="contact_rgpd">J'accepte
+                <a href="{{ path ('privacy_policy')}}" target="_blank">la politique de confidentialité</a><span class="red"> *</span>
+            </label>
+        </div>
+        <button type="submit" class="btn_secondary btn_text cursor_pointer">S'inscrire</button>
+        {{ form_end(registrationForm) }}
+    </section>
+{% endblock %}

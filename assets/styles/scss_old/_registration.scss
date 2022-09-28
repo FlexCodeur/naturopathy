@@ -1,0 +1,43 @@
+// inputs password style and button
+#form__registration {
+    padding: 60px 80px;
+  .form__content--input {
+    margin-bottom: 25px;
+  }
+  .btn_secondary {
+    font-size: 20px;
+    border: none;
+    width: 30%;
+    margin: 40px auto 0;
+  }
+}
+
+#registration_form_plainPassword {
+  div {
+    width: 100%;
+    margin-bottom: 25px;
+    @extend .form__content--input;
+    &:nth-child(1) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+// Checkboxes style
+.form__content--checkboxes {
+  height: 50px;
+  padding: 25px 0;
+  &>div {
+    @include flex(center, center, $dir: row-reverse);
+    .checkbox__rgpd {
+      border: $borderSolidDark;
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+    .required {
+      font-size: 14px;
+      color: $grey;
+    }
+  }
+}

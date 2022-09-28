@@ -1,0 +1,3 @@
+{% for category in categories | slice(0,1) %}
+<a class="btn_secondary" href="{{  path('app_category_show', {slug: category.slug}) }}">Découvrir</a>
+{% endfor %}

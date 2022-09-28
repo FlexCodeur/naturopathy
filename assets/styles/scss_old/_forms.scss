@@ -1,0 +1,66 @@
+//Form form Style
+.form {
+  padding-bottom: 160px;
+  &__content {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    border-radius: 8px;
+    width: 25%;
+    margin: $mxAuto;
+    padding: 50px;
+    &--input {
+      @include flex(center, center, column);
+      &>input {
+        font-size: 20px;
+        border: none;
+        border-bottom: $borderSolidDark;
+        border-radius: 5px;
+        height: 50px;
+        width: 100%;
+        &:focus {
+          background: $bgformElements;
+          outline: none;
+        }
+        &:not(:last-child) {
+          margin-bottom: 35px;
+        }
+        &::placeholder {
+          opacity: 60%;
+          border-radius: 5px;
+          padding: 15px 10px 10px 10px;
+          height: 50px;
+          width: 100%;
+        }
+      }
+    }
+    .btn_primary {
+      border: none;
+      font-size: 20px;
+      width: 45%;
+      margin: 60px auto 0;
+      @include respond('extraLarge') {
+        width: 30%;
+        font-size: 18px;
+      }
+      @include respond('tabPort') {
+        width: 50%;
+        font-size: 18px;
+      }
+      @include respond('mobileLarge') {
+        width: 70%;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+//Forms messages style
+.alerte__message {
+  color: $red;
+  &>ul {
+    align-self: flex-start;
+  }
+}
+
+.succes__message {
+  color: $primaryColor;
+}

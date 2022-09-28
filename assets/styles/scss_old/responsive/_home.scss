@@ -1,0 +1,484 @@
+//Media queries home page
+.banner {
+  @include respond('tab') {
+    padding: 60px 0;
+  }
+    &__card {
+      @include respond('laptop') {
+        padding: 50px 55px 50px;
+        margin: 0 60px;
+        width: 60%;
+      }
+      @include respond('large') {
+        padding: 50px 55px 50px;
+        margin: 0 60px;
+        width: 60%;
+      }
+      @include respond('extraLarge') {
+        padding: 50px 55px 50px;
+        margin: 0 60px;
+        width: 50%;
+      }
+      & > h1 {
+        @include respond('mobile') {
+          line-height: 28px;
+          margin-bottom: 45px;
+        }
+        @include respond('mobileLarge') {
+          line-height: 45px;
+          margin-bottom: 50px;
+        }
+      }
+      @include respond('mobileLarge') {
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 20px 50px;
+      }
+      @include respond('tabPort') {
+        width: 85%;
+        margin: 0 auto;
+        padding: 50px 20px 50px;
+      }
+      @include respond('tabLand') {
+        padding: 50px 55px 50px;
+        width: 70%;
+        margin: 0 80px;
+      }
+      &>p:not(:nth-child(3)) {
+        @include respond('mobileLarge') {
+          font-size: 18px;
+          line-height: 25px;
+          &::before {
+            font-size: 20px;
+            top: -30px;
+            left: -10px;
+          }
+        }
+        @include respond('tabPort') {
+          font-size: 25px;
+          line-height: 25px;
+          &::before {
+            font-size: 30px;
+            top: -50px;
+            left: -10px;
+          }
+        }
+      }
+      .btn_secondary {
+        @include respond('mobileLarge') {
+          font-size: 18px;
+          margin: 50px auto 0;
+          padding: 15px;
+          width: 60%;
+        }
+        @include respond('tabPort') {
+          font-size: 22px;
+          padding: 18px;
+          width: 50%;
+        }
+        @include respond('tabLand') {
+          font-size: 22px;
+          padding: 18px;
+          width: 50%;
+        }
+      }
+      .author {
+        @include respond('mobileLarge') {
+          font-size: 16px;
+          &::after {
+            font-size: 20px;
+            bottom: -30px;
+            right: -5px;
+          }
+        }
+        @include respond('tabPort') {
+          font-size: 20px;
+          &:after {
+            font-size: 30px;
+            bottom: -30px;
+            right: -10px;
+          }
+        }
+      }
+    }
+  }
+
+.title {
+  @include respond('mobile') {
+    font-size: 24px;
+  }
+  @include respond('mobileLarge') {
+    font-size: 30px;
+  }
+  @include respond('tabPort') {
+    font-size: 35px;
+  }
+}
+
+//Who section
+.who__iam {
+  @include respond('mobile') {
+    padding: 0 10% 60px;
+  }
+    .titleH2 {
+      @include respond('mobile') {
+        font-size: 25px;
+        &:before {
+          width: 140px;
+      }
+    }
+    & > h2 {
+      @include respond('mobile') {
+        margin-top: 80px;
+      }
+    }
+      @include respond('mobileLarge') {
+        font-size: 35px;
+        &:before {
+          width: 195px;
+        }
+      }
+  }
+  &--content {
+    @include respond('tabLand') {
+       margin-top: 80px;
+       flex-direction: column;
+    }
+  }
+}
+
+
+.who__img--item {
+  @include respond('tabPort') {
+    margin-bottom: 50px;
+    padding: 150px;
+  }
+  @include respond('tabLand') {
+    margin-bottom: 50px;
+    padding: 180px;
+  }
+  @include respond('extraLarge') {
+    margin: 0 50px 50px 20px;
+    padding: 180px;
+  }
+}
+
+.who__description--item {
+  @include respond('mobileLarge') {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  @include respond('tabPort') {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  @include respond('laptop') {
+    font-size: 26px;
+    line-height: 30px;
+  }
+    & .btn_secondary {
+      @include respond('mobileLarge') {
+        width: 50%;
+        font-size: 18px;
+        margin: 70px auto 0;
+        padding: 10px;
+    }
+      @include respond('tabPort') {
+        font-size: 22px;
+        width: 50%;
+        margin: 70px auto 0;
+        padding: 10px;
+      }
+      @include respond('tabLand') {
+        font-size: 24px;
+        width: 40%;
+        margin: 70px auto 0;
+        padding: 10px;
+      }
+      @include respond('laptop') {
+        font-size: 26px;
+        width: 60%;
+        margin: 70px auto 0;
+        padding: 20px;
+      }
+      @include respond('extraLarge') {
+        font-size: 26px;
+        width: 50%;
+        margin: 70px auto 0;
+        padding: 20px;
+      }
+  }
+}
+
+.naturopathy__content {
+    .titleH2 {
+      @include respond('mobileLarge') {
+        font-size: 25px;
+        &:before {
+          width: 385px;
+        }
+      }
+      @include respond('tabPort') {
+        font-size: 35px;
+        &:before {
+          width: 543px;
+        }
+      }
+    }
+    & > p {
+      @include respond('mobileLarge') {
+        font-size: 18px;
+        line-height: 30px;
+        padding: 10px 40px 0;
+        &:not(:nth-child(2)) {
+          padding: 35px 40px 350px;
+        }
+      }
+      @include respond('tabPort') {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 10px 40px 0;
+        &:not(:nth-child(2)) {
+          padding: 35px 40px 350px;
+        }
+      }
+      @include respond('extraLarge') {
+        font-size: 30px;
+        line-height: 30px;
+        padding: 10px 40px 0;
+        &:not(:nth-child(2)) {
+          padding: 35px 40px 350px;
+        }
+      }
+    }
+  }
+
+.naturopathy__extra--item {
+  @include respond('mobileLarge') {
+    font-size: 18px;
+    width: 90%;
+    padding: 100px 40px 65px;;
+    &:before {
+      width: 120px;
+      height: 120px;
+      top: -30%;
+    }
+  }
+  @include respond('tabPort') {
+    font-size: 22px;
+    width: 90%;
+    padding: 100px 40px 65px;
+    &:before {
+      width: 120px;
+      height: 120px;
+      top: -25%;
+    }
+  }
+  @include respond('tabLand') {
+    font-size: 26px;
+    width: 90%;
+    padding: 100px 40px 65px;
+    &:before {
+      width: 140px;
+      height: 140px;
+      top: -30%;
+    }
+  }
+  @include respond('laptop') {
+    font-size: 30px;
+    width: 90%;
+    padding: 100px 40px 65px;
+    &:before {
+      width: 160px;
+      height: 160px;
+      top: -40%;
+    }
+  }
+  @include respond('extraLarge') {
+    font-size: 30px;
+    width: 90%;
+    padding: 100px 40px 65px;
+    &:before {
+      width: 160px;
+      height: 160px;
+      top: -40%;
+    }
+  }
+  .btn_primary {
+    @include respond('mobileLarge') {
+        width: 60%;
+        font-size: 18px;
+        margin: 50px auto 0;
+        padding: 15px;
+    }
+    @include respond('tabPort') {
+        width: 50%;
+        font-size: 22px;
+        margin: 50px auto 0;
+        padding: 18px;
+    }
+    @include respond('laptop') {
+      width: 25%;
+      font-size: 22px;
+      margin: 50px auto 0;
+      padding: 18px;
+    }
+    @include respond('extraLarge') {
+      width: 25%;
+      font-size: 24px;
+      margin: 50px auto 0;
+      padding: 20px;
+    }
+  }
+}
+
+.citations {
+  @include respond('mobileLarge') {
+    margin-top: 300px;
+    padding-bottom: 130px;
+    }
+  @include respond('tabLand') {
+    margin-top: 300px;
+    padding-bottom: 130px;
+  }
+  &__author {
+      @include respond('mobileLarge') {
+      padding: 0 40px;
+      flex-direction: column-reverse;
+    }
+    @include respond('tabPort') {
+      padding: 0 40px;
+      flex-direction: column-reverse;
+    }
+    @include respond('tabLand') {
+      padding: 0 40px;
+      flex-direction: column-reverse;
+    }
+    @include respond('laptop') {
+      padding: 0 40px;
+    }
+    & > img {
+        @include respond('mobileLarge') {
+        width: 120px;
+        margin: 0 auto 40px;
+      }
+      @include respond('tabPort') {
+        width: 180px;
+        margin: 0 auto 40px;
+      }
+      @include respond('laptop') {
+        width: 190px;
+        margin: 0 auto 40px;
+      }
+    }
+    &--content {
+        @include respond('mobileLarge') {
+        width: 100%;
+        font-size: 18px;
+        &:before {
+          font-size: 30px;
+          top: -40px;
+          left: -20px;
+        }
+      }
+      @include respond('tabPort') {
+        width: 100%;
+        font-size: 22px;
+        &:before {
+          font-size: 40px;
+          top: -50px;
+          left: -20px;
+        }
+      }
+      @include respond('tabLand') {
+        width: 100%;
+        font-size: 26px;
+        &:before {
+          font-size: 40px;
+          top: -50px;
+          left: -20px;
+        }
+      }
+    }
+  }
+}
+
+.author {
+  @include respond('mobileLarge') {
+    font-size: 16px;
+    &:after {
+      font-size: 30px;
+      bottom: -40px;
+      right: -20px;
+    }
+  }
+  @include respond('tabPort') {
+    font-size: 20px;
+    &:after {
+      font-size: 40px;
+      bottom: -40px;
+      right: -20px;
+    }
+  }
+}
+
+//Blog section
+.blog {
+    .titleH2 {
+      @include respond('mobile') {
+        font-size: 25px;
+      }
+      @include respond('tab') {
+        font-size: 35px;
+      }
+
+    }
+    & > h2:before {
+      @include respond('mobile') {
+        width: 285px;
+      }
+      @include respond('mobileLarge') {
+        width: 400px;
+      }
+      @include respond('tab') {
+        width: 400px;
+      }
+    }
+    &__content {
+      &--cards {
+        @include respond('tab') {
+          flex-direction: column;
+        }
+      }
+    }
+    .btn_secondary {
+      @include respond('mobile') {
+        font-size: 20px;
+        width: 50%;
+        padding: 15px;
+      }
+      @include respond('mobileLarge') {
+        width: 45%;
+        font-size: 22px;
+        padding: 15px;
+      }
+      @include respond('tabPort') {
+        width: 35%;
+        font-size: 22px;
+        padding: 18px;
+      }
+      @include respond('laptop') {
+        width: 25%;
+        font-size: 26px;
+        padding: 22px;
+      }
+      @include respond('extraLarge') {
+        width: 20%;
+        font-size: 26px;
+        padding: 22px;
+      }
+    }
+  }
+
+
+

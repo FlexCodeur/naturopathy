@@ -1,0 +1,192 @@
+.banner {
+  padding: 150px 0;
+  @include background('medecin-alternative.jpg', center, cover, no-repeat);
+  &__card {
+    background: $white;
+    font-weight: 600;
+    padding: 50px 80px 80px;
+    border-radius: 25px;
+    @include containerSize(40%, 0 125px);
+    &>h1 {
+      text-align: center;
+      line-height: 70px;
+      margin-bottom: 80px;
+    }
+    &>p:not(:nth-child(3)) {
+      font-size: 32px;
+      line-height: 45px;
+      position: relative;
+      &:before {
+        content: "\f10d";
+        font-family: 'FontAwesome';
+        font-size: 45px;
+        position: absolute;
+        top: -50px;
+        left: -45px;
+        color: $sand;
+      }
+    }
+    .author:after {
+      content: "\f10e";
+      font-family: 'FontAwesome';
+      font-size: 45px;
+      position: absolute;
+      bottom: -50px;
+      right: -35px;
+      color: $sand;
+    }
+  }
+}
+
+// Qui suis-je section
+.who__iam {
+  padding: 0 10% 120px;
+  &>h2 {
+    margin-top: 120px;
+    text-align: center;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      border-bottom: $borderSolidSecondary;
+      width: 267px;
+      bottom: 0;
+    }
+  }
+  &--content {
+    margin-top: 120px;
+    @include flex(center, center);
+  }
+}
+
+.who__img--item {
+  @include background('nicolas-guidoux-qui-suis-je.jpeg', center, cover, no-repeat);
+  padding: 250px;
+  border-radius: 250px;
+  margin: 0 120px;
+}
+
+.who__description--item {
+  font-size: 32px;
+  line-height: 35px;
+  &>p:nth-child(2) {
+    padding-top: 30px;
+  }
+  a {
+    width: 35%;
+  }
+}
+
+// Naturopathie section
+.naturopathy {
+  position: relative;
+  color: $white;
+  margin-top: 50px;
+  @include background('globules-naturopathie-demonstration.jpg', center, cover, no-repeat);
+  &__content {
+    background-color: rgba(0 , 0, 0, 0.6);
+    &>h2 {
+      padding-top: 80px;
+      text-align: center;
+      position: relative;
+
+      &:before {
+        content: "";
+        position: absolute;
+        border-bottom: $borderSolidSecondary;
+        width: 745px;
+        bottom: 0;
+      }
+    }
+    &>p {
+      font-size: 32px;
+      line-height: 35px;
+      padding: 120px 250px 0;
+      &:not(:nth-child(2)) {
+        padding: 35px 250px 550px;
+      }
+    }
+  }
+}
+
+.naturopathy__extra--item {
+  position: absolute;
+  font-size: 32px;
+  color: $fontColor;
+  background-color: $grayLight;
+  padding: 140px 80px 80px;
+  width: 45%;
+  border-radius: 40px;
+  bottom: 0px;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  &:before {
+    content: "";
+    position: absolute;
+    @include background('homeopathie-illustration.png', center, cover, no-repeat);
+    width: 170px;
+    height: 170px;
+    top: -33%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+// Citations section
+.citations {
+  margin-top: 450px;
+  padding-bottom: 250px;
+  &__author {
+    padding: 0 80px;
+    @include flex(center, center);
+    &--content {
+      font-size: 32px;
+      position: relative;
+      width: 60%;
+      margin: $mxAuto;
+      &:before {
+        content: "\f10d";
+        font-family: 'FontAwesome';
+        font-size: 45px;
+        position: absolute;
+        top: -60px;
+        left: -55px;
+        color: $green;
+      }
+    }
+    &--img {
+      margin-right: 90px;
+      width: 300px;
+      border-radius: 50%;
+    }
+  }
+}
+// override "after" element author class
+.author:after {
+    content: "\f10e";
+    font-family: 'FontAwesome';
+    font-size: 45px;
+    position: absolute;
+    bottom: -50px;
+    right: -35px;
+    color: $green;
+}
+
+//Blog section
+.blog {
+  &>h2 {
+    position: relative;
+    text-align: center;
+    &:before {
+      content: "";
+      position: absolute;
+      border-bottom: $borderSolidSecondary;
+      width: 548px;
+      bottom: 0;
+    }
+  }
+  .btn_secondary {
+    width: 12%;
+    margin-bottom: 120px;
+  }
+}

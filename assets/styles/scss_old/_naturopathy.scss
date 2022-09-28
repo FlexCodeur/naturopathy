@@ -1,0 +1,133 @@
+// Banner naturopathy
+.naturopathy__banner {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  @include background('complements-alimentaires-en-naturopathie.jpeg', center, cover, no-repeat);
+  &--filter {
+    padding: 220px 0;
+    background-color: rgba(0, 0, 0, .6);
+    &>.title {
+      font-size: 68px;
+    }
+  }
+}
+
+//h2 style
+.naturopathy__page {
+  &>.titleH2 {
+    margin: 120px 0 180px;
+    &:before{
+      width: 745px;
+    }
+  }
+}
+
+//Flex container "La naturopathie c'est quoi" pictures + text
+.naturopathy__flex {
+  font-size: 28px;
+  padding: 120px 0;
+  @include flex(center, center);
+  &>img {
+    width: 30%;
+    border-radius: 5px;
+    margin-right: 50px;
+  }
+  &--content {
+    width: 55%;
+    line-height: 32px;
+    &>h3 {
+      position: relative;
+      font-size: 36px;
+      padding-bottom: 50px;
+      margin-left: 25px;
+      &::before{
+        content: "\f111";
+        font-family: "FontAwesome";
+        font-size: 15px;
+        position: absolute;
+        color: $secondaryColor;
+        left: -25px;
+      }
+    }
+    &>p {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// "Hygiénisme" elements
+.naturopathy__hygienisme--content {
+  font-size: 32px;
+  margin: $mxAuto;
+  padding: 80px 0;
+  @extend .naturopathy__flex--content;
+  width: 90%;
+}
+
+.hygienisme__content {
+  text-align: center;
+  padding: 50px 0;
+  @include flex(space-around, flex-start);
+  &--items {
+    &>i {
+      font-size: 120px;
+      color: white;
+      background: $green;
+      border-radius: 30px;
+      width: 250px;
+      height: 250px;
+      @include flex(center, center)
+    }
+    &:nth-child(3) {
+      .hygienisme__items--title {
+        width: 250px;
+      }
+    }
+  }
+}
+
+.hygienisme__items--title {
+  color: $secondaryColor;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+//Override citations Style
+.naturopathy__page {
+  .citations {
+    background: rgb(246, 246, 246);
+    margin: 120px 0;
+    padding: 120px 0;
+  }
+}
+
+// Section "La naturopathie c'est pour qui ?"
+.naturopathy__footer {
+  padding-bottom: 150px;
+  @extend .naturopathy__hygienisme--content;
+  &>.titleH2:before{
+    bottom: -8px;
+    width: 850px;
+  }
+  &>.btn_secondary {
+    width: 15%;
+  }
+}
+.pathology {
+  padding: 30px 0 50px;
+  margin: 0 50px;
+  &__list {
+    margin-top: 50px;
+    @include flex(space-between, center);
+    & ul {
+      position: relative;
+      margin-left: 50px;
+    }
+    & img {
+      width: 50%;
+    }
+  }
+}

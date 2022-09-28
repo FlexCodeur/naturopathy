@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales{% endblock %}
+{% block meta %}
+    <meta name="description" content="Cette page concerne les mentions légales du site Nicolas guidoux Naturopathe à Bordeaux."/>
+    <meta property="og:title" content= "Mentions légales"/>
+    <meta property="og:description" content= "Cette page concerne les mentions légales du site Nicolas guidoux Naturopathe à Bordeaux."/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content=" {{ path ('legal_notice') }}" />
+    <meta property="og:image" content="{{ asset ('build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png') }}" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue" />
+{% endblock meta %}
+
+{% block body %}
+    <section class="mentions">
+        <h1 class="titleH1">Mentions Légales</h1>
+        <h2>Nicolas GUIDOUX Naturopathe - Iridologue</h2>
+        <p>Inscrit au registre des sociétés sous le SIREN n°853530368, dont
+            le siège social est 39 rue du Président Coty 33440 Ambarès-et-Lagrave
+            Représentée par Monsieur Nicolas GUIDOUX en qualité de chef d'établissement</p>
+        <h2>Directeur de la publication</h2>
+        <p>Monsieur Nicolas GUIDOUX, 39 rue du Président Coty 33440 Ambarès-et-Lagrave</p>
+        <h2>Hebergeur</h2>
+        <p>ONE</p>
+        <p>57 rue d'Amsterdam 75008 PARIS</p>
+        <h2>CNIL</h2>
+        <P>Le site est déclaré à la CNIL sous le n°21XXXXXvX.
+            En application de la loi n°78-17 du 6 janvier 1978 relative à
+            l'informatique, aux fichiers et aux libertés, chaque internaute
+            dispose des droits d'opposition (article 38 de la loi), d'accès
+            (articles 39, 41 et 42 de la loi) et de rectification (article 40 de
+            la loi) des données le concernant. Ainsi, il peut exiger que soient
+            rectifiées, complétées, clarifiées, mises à jour ou effacées les
+            informations le concernant qui sont inexactes, incomplètes,
+            équivoques, périmées, ou dont la collecte ou l'utilisation, la
+            communication ou la conservation est interdite. Chaque internaute
+            peut exercer ces droits en écrivant à : Nicolas GUIDOUX - 39 rue du Président Coty
+            33440 Ambarès-et-Lagrave</P>
+    </section>
+{% endblock %}

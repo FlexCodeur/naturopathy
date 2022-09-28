@@ -1,0 +1,270 @@
+// FORMULAIRE D'ADHESION
+section.contact {
+  padding-bottom: 80px;
+  .title {
+    margin-top: 120px;
+    text-transform: uppercase;
+    text-align: center;
+    @include font("JOST_R", 50);
+    @include respond("mobile") {
+      font-size: 26px;
+    }
+    @include respond("tab") {
+      font-size: 34px;
+    }
+    @include respond("tabLand") {
+      font-size: 42px;
+    }
+  }
+  & > form {
+    border: $borderSolidDark;
+    @include containerSize(50%, 70px auto 30px);
+    @include respond("mobile") {
+      width: 90%;
+    }
+    @include respond("tab") {
+      width: 80%;
+    }
+    @include respond("tabLand") {
+      width: 60%;
+    }
+    .btn_secondary {
+      text-align: center;
+      font-weight: 600;
+      width: 10px;
+      margin-bottom: 50px;
+      @include respond("mobile") {
+        margin: $mxAuto;
+      }
+      @include respond("mobileLarge") {
+        margin: $mxAuto;
+      }
+      @include respond("tab") {
+        margin: $mxAuto;
+      }
+      @include respond("tabLand") {
+        margin: $mxAuto;
+        @include respond("laptop") {
+          margin: $mxAuto;
+        }
+      }
+    }
+    .contactForm {
+      @include flex(center, flex-start);
+      @include respond('tab') {
+        flex-direction: column;
+      }
+      .contactItems {
+        padding: 30px 120px;
+        @include flex(center, center, column);
+        @include respond("mobile") {
+          padding: 15px;
+        }
+        @include respond("tab") {
+          padding: 15px;
+        }
+        @include respond("tabLand") {
+          padding: 15px;
+        }
+        @include respond("laptop") {
+          padding: 15px;
+        }
+        @include respond("smallLaptop") {
+          padding: 50px;
+        }
+        & > input {
+          font-size: 24px;
+          margin: 25px 0;
+          width: 100%;
+          height: 35px;
+          border: none;
+          border-bottom: $borderSolidDark;
+          &::placeholder {
+            @include font("JOST_R", 24);
+            opacity: 0.6;
+            letter-spacing: 1px;
+            @include respond("mobile") {
+              font-size: 12px;
+            }
+            @include respond("tab") {
+              font-size: 14px;
+            }
+            @include respond("tabLand") {
+              font-size: 18px;
+            }
+            @include respond("laptop") {
+              font-size: 22px;
+            }
+          }
+          @include respond("mobile") {
+            font-size: 12px;
+          }
+          @include respond("tab") {
+            font-size: 14px;
+          }
+          @include respond("tabLand") {
+            font-size: 18px;
+          }
+          @include respond("laptop") {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+    & > textarea {
+      display: block;
+      background-color: $grayLight;
+      width: 80%;
+      height: 229px;
+      margin: 0 auto;
+      & > ::placeholder {
+        @include font("JOST_R", 24px);
+      }
+    }
+    & > button {
+      margin: 35px auto;
+      opacity: 1;
+      @include respond('tabPort') {
+        width: 75%;
+      }
+      &:hover {
+        color: $white;
+        background-color: $primaryColor;
+      }
+    }
+  }
+}
+
+// SECTION COORDONNEES //
+section.location {
+  margin-top: 120px;
+  padding-bottom: 50px;
+  position: relative;
+  .title {
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    @include font("JOST_R", 50);
+    @include respond("mobile") {
+      font-size: 26px;
+    }
+    @include respond("tab") {
+      font-size: 34px;
+    }
+    @include respond("tabLand") {
+      font-size: 42px;
+    }
+  }
+  .map {
+    & > iframe {
+      margin: 30px 0;
+      width: 100%;
+    }
+  }
+  .adressCard {
+    font-size: 28px;
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    width: 30%;
+    background: $white;
+    padding: 120px;
+    border: $borderSolidDarkNight;
+    @include respond("laptop") {
+      font-size: 24px;
+      padding: 110px;
+      width: 60%;
+    }
+    @include respond("tabLand") {
+      font-size: 24px;
+      padding: 0;
+      width: 40%;
+    }
+    @include respond("tab") {
+      font-size: 22px;
+      padding: 0;
+      width: 70%;
+    }
+    @include respond("mobileLarge") {
+      font-size: 18px;
+      padding: 0;
+      width: 80%;
+    }
+    @include respond("mobile") {
+      font-size: 18px;
+      padding: 0;
+      width: 90%;
+    }
+    .adressCardItems {
+      line-height: 36px;
+      padding-bottom: 35px;
+      @include respond("mobile") {
+        padding: 15px;
+      }
+      @include respond("tab") {
+        padding: 15px;
+      }
+      @include respond("tabLand") {
+        padding: 15px;
+      }
+      & > p {
+        span {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}
+.socialIcons {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-bottom: 15px;
+  width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    border: 1px solid $primaryColor;
+    width: 150px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    @include respond("mobile") {
+      display: none;
+    }
+    @include respond("tab") {
+      display: none;
+    }
+    @include respond("tabLand") {
+      display: none;
+      font-size: 26px;
+    }
+  }
+  & > ul {
+    @include flex(center, center);
+    & > li {
+      & > i {
+        font-size: 35px;
+        padding-top: 25px;
+        @include respond("mobile") {
+          display: none;
+        }
+        @include respond("tab") {
+          display: none;
+        }
+        @include respond("tabLand") {
+          display: none;
+          font-size: 26px;
+          @include respond("laptop") {
+            font-size: 28px;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+}

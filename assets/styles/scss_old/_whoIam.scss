@@ -1,0 +1,85 @@
+.titleH1 {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 120px 0;
+  &:before {
+    content: "";
+    position: absolute;
+    border-bottom: $borderSolidSecondary;
+    width: 300px;
+    bottom: 0;
+  }
+}
+
+// Biography section
+.who {
+  padding-bottom: 80px;
+  &__footer {
+    font-size: 28px;
+    padding-top: 50px;
+    width: 82%;
+    margin: $mxAuto;
+    & p {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.who__flex {
+  font-size: 28px;
+  @include flex(center, center);
+  & img {
+    width: 560px;
+    border-radius: 5px;
+    margin-right: 50px;
+  }
+  &--content {
+    width: 50%;
+    line-height: 32px;
+    & p:not(:last-child) {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+// Discovery section
+.titleH2 {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  &:before {
+    content: "";
+    position: absolute;
+    border-bottom: $borderSolidSecondary;
+    width: 590px;
+    bottom: 0;
+  }
+}
+
+.discovery {
+  background: $grayLight;
+  text-align: center;
+  padding: 120px 0;
+  &__content {
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include flex(center, center);
+    &--items {
+      padding-top: 60px;
+      &:not(:last-child) {
+        margin-right: 180px;
+      }
+      &>i {
+        font-size: 70px;
+        color: $primaryColor;
+        margin-bottom: 40px;
+      }
+      &>a {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('favicons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>{% block title %}Bienvenue sur le site de Nicolas Guidoux{% endblock %} | Nicolas Guidoux Naturopathe</title>
+    {% block meta %}{% endblock %}
+
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        <link rel="stylesheet" href="{{asset('libs/slick/slick.css')}}">
+        <link rel="stylesheet" href="{{asset('libs/fontawesome/css/all.min.css')}}">
+        <link rel="stylesheet" href="{{asset('libs/slick/slick-theme.css')}}">
+        {#        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">#}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% include 'header/_headerTop.html.twig' %}
+
+        {% include 'header/_navBar.html.twig' %}
+
+    </header>
+    <main>
+        {% block body %}
+        {% endblock %}
+    </main>
+    <footer>
+        {% include 'footer/_footerLogos.html.twig' %}
+        {% include 'footer/_footer.html.twig' %}
+    </footer>
+    {% block javascripts %}
+{#        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>#}
+        <script src="{{asset('libs/jquery/jquery-3.6.0.min.js')}}"></script>
+        <script src="{{asset('js/scripts.js')}}"></script>
+        <script src="{{asset('libs/slick/slick.min.js')}}"></script>
+        <script src="{{asset('libs/slick/my-slick.js')}}"></script>
+    {% endblock %}
+</body>
+</html>

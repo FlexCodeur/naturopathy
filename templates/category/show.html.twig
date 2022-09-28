@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.slug }}{% endblock %}
+{% block meta %}
+    <meta name="description" content="Liste des articles du blog"/>
+    <meta property="og:title" content= " {{ category.slug }} "/>
+    <meta property="og:type" content="Liste des articles du blog" />
+    <meta property="og:url" content="{{ path('app_category_show',{'slug': category.slug}) }}" />
+    <meta property="og:image" content="/build/assets/images/{{ category.media }}" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue à Ambarès-et-Lagrave" />
+{% endblock meta %}
+{% block body %}
+    {% include 'article/index.html.twig'%}
+{% endblock %}

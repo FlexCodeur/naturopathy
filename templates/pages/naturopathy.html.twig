@@ -1,0 +1,227 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}La naturopathie c'est quoi ?{% endblock %}
+{% block meta %}
+    <meta name="description" content="Reconnue par l’OMS, la naturopathie est une médecine traditionnelle, au même titre que la médecine traditionnelle chinoise ou indienne. L’approche naturopathique est basée sur des savoirs, et des pratiques ancestrales inspirées d’Hippocrate( IVème siècle avant J-C ). L’approche de la naturopathie est avant tout préventive. Elle permet de favoriser l’auto guérison, ramener l’organisme à l’équilibre, et préserver une parfaite santé à l’aide de techniques naturelles."/>
+    <meta property="og:description" content="Reconnue par l’OMS, la naturopathie est une médecine traditionnelle, au même titre que la médecine traditionnelle chinoise ou indienne. L’approche naturopathique est basée sur des savoirs, et des pratiques ancestrales inspirées d’Hippocrate( IVème siècle avant J-C ). L’approche de la naturopathie est avant tout préventive. Elle permet de favoriser l’auto guérison, ramener l’organisme à l’équilibre, et préserver une parfaite santé à l’aide de techniques naturelles."/>
+    <meta property="og:title" content= " la naturaopathie c'est quoi ? "/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ path('naturopathy') }}" />
+    <meta property="og:image" content="/build/assets/images/complements-alimentaires-en-naturopathie.7c9ffb84.jpeg" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue à Ambarès-et-Lagrave" />
+{% endblock meta %}
+
+{% block body %}
+{#Naturopathy banner#}
+    <div class="naturopathy__banner">
+        <div class="naturopathy__banner--filter">
+            <h1 class="title">La naturopathie</h1>
+        </div>
+    </div>
+
+{#Section "La naturopathie c'est quoi ?"#}
+    <section class="naturopathy__page">
+        <h2 class="titleH2">La naturopathie c'est quoi ?</h2>
+        <article>
+            <div class="naturopathy__flex">
+                <img src="{{ asset ('build/assets/images/holisme.jpg')}}" alt="photo holisme">
+                <div class="naturopathy__flex--content">
+                    <h3 class="titleH3">L'holisme</h3>
+                    <p>Une vision globale de l’individu, ce que l’on appelle
+                        <strong>l’Holisme</strong>.
+                        Cette vision globale comprend votre alimentation, votre
+                        sommeil, votre gestion du stress, mais aussi votre
+                        environnement, votre lieu de vie, votre cadre travail,
+                        votre cadre familial, ainsi que vos antécédents personnels
+                        et familiaux.</p>
+                    <p>Toutes ces informations me permettront de
+                        vous connaitre, et de comprendre vos besoins. Elles me
+                        permettront de vous donner des conseils personnalisés.
+                        Et oui … parce que ce qui est adapté à vos besoins ne
+                        sera peut-être pas adapté à ceux de votre voisin.
+                        C’est là tout l’intérêt de la naturopathie.</p>
+                </div>
+            </div>
+            <div class="citations">
+                <div class="citations__author">
+                    <div class="citations__author--content">
+                        <p>La santé n’est pas simplement l’absence de maladie.
+                            C’est un véritable état physique, psychique et mental. </p>
+                        <p class="author">Hildegarde Von Bingen</p>
+                    </div>
+                    <img class="citations__author--img" src="{{ asset('build/assets/images/hildegarde-von-bingen.jpg') }}" alt="photo de Hildegarde-Von-Bingen">
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="naturopathy__flex">
+                <img src="{{ asset ('build/assets/images/humorisme.jpg')}}" alt="photo humorisme en naturopathie">
+                <div class="naturopathy__flex--content">
+                    <h3 class="titleH3">L'humorisme</h3>
+                    <p>De par son fonctionnement normal, notre corps fabrique
+                        des déchets. S'y ajoutent les déchets issus de notre
+                        alimentation, l’environnement, le stress, les pollutions etc...</p>
+                    <p>Quand ils sont en surnombre, on parle de toxémie.
+                        Cette toxémie va se retrouver dans nos liquides
+                        ('les humeurs' comme le sang et la lymphe), c'est ce que
+                        l'on appelle <strong>l'Humorisme</strong>.</p>
+                </div>
+            </div>
+            <div class="citations">
+                <div class="citations__author">
+                    <div class="citations__author--content">
+                        <p>Le microbe n’est rien, c’est le terrain qui est tout.</p>
+                        <p class="author">Claude Bernard</p>
+                    </div>
+                    <img class="citations__author--img" src="{{ asset('build/assets/images/claude-bernard.jpg') }}" alt="photo de Claude Bernard">
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="naturopathy__flex">
+                <img src="{{ asset ('build/assets/images/vitalisme.jpg')}}" alt="photo vitalisme">
+                <div class="naturopathy__flex--content">
+                    <h3 class="titleH3">Le vitalisme</h3>
+                    <p>Les techniques utilisées seront adaptées à votre vitalité,
+                        c’est que l’on appelle le Vitalisme.
+                        Une cure détox par exemple, très efficace pour
+                        débarrasser le corps de ses toxines, vient mobiliser
+                        l’énergie de l’individu.</p>
+                    <p>Si cette énergie est trop faible,
+                        l’individu peut ne pas supporter cette cure, ressentir des
+                        effets secondaires et se sentir plus mal qu’avant. Dans ce
+                        cas, on tâchera d’augmenter l’énergie par une cure de
+                        revitalisation avant de procéder au nettoyage.
+                        C’est pour cela qu’analyser votre force vitale est
+                        FONDAMENTAL en naturopathie.</p>
+                </div>
+            </div>
+            <div class="citations">
+                <div class="citations__author">
+                    <div class="citations__author--content">
+                        <p>L’homme qui se fait vieux avant l'âge perd toute
+                            vitalité et sa gaieté</p>
+                        <p class="author">Auguste-Louis Petiet</p>
+                    </div>
+                    <img class="citations__author--img" src="{{ asset('build/assets/images/august-louis-peliet.jpg') }}" alt="portrait de Auguste-Louis Petiet">
+                </div>
+            </div>
+        </article>
+        <article>
+            <div class="naturopathy__flex">
+                <img src="{{ asset ('build/assets/images/stress.jpg')}}" alt="photo le causalisme">
+                <div class="naturopathy__flex--content">
+                    <h3 class="titleH3">Le causalisme</h3>
+                    <p>En naturopathie, ce qu’on recherche activement, c’est la
+                        cause de votre problématique. C’est ce que l’on appelle
+                        <strong>le Causalisme</strong>.</p>
+                    <p>Par exemple, pour des maux de tête, ils peuvent être dus
+                        au stress, à la fatigue, à une mauvaise alimentation,
+                        à l’utilisation prolongée des écrans, à un foie surchargé
+                        et les solutions proposées ne seront évidemment pas les
+                        mêmes selon la cause.</p>
+                </div>
+            </div>
+            <div class="citations">
+                <div class="citations__author">
+                    <div class="citations__author--content">
+                        <p>La science véritable est la science des causes.</p>
+                        <p class="author">Francis Bacon</p>
+                    </div>
+                    <img class="citations__author--img" src="{{ asset('build/assets/images/francis_bacon.jpg') }}" alt="portrait de Francis Bacon">
+                </div>
+            </div>
+        </article>
+        <article id="naturopathy__article">
+            <div class="naturopathy__hygienisme--content">
+                <h3 class="titleH3">L'hygiénisme</h3>
+                <p>Une fois la (ou les) cause(s) repérée(s), la naturopathie propose des techniques uniquement naturelles
+                    pour retrouver un équilibre. Les techniques, c’est ce que l’on appelle <strong>l’Hygiénisme</strong>.</p>
+                <p>Dans la boite à outils du naturopathe, il y a 3 techniques majeures :</p>
+                <div class="hygienisme__content">
+                    <div class="hygienisme__content--items">
+                        <i class="fa-solid fa-burger"></i>
+                        <h4 class="hygienisme__items--title">L'alimentation</h4>
+                    </div>
+                    <div class="hygienisme__content--items">
+                        <i class="fa-solid fa-person-hiking"></i>
+                        <h4 class="hygienisme__items--title">L'activité physique</h4>
+                    </div>
+                    <div class="hygienisme__content--items">
+                        <i class="fa-solid fa-face-frown-open"></i>
+                        <h4 class="hygienisme__items--title">L'équilibre émotionnel</h4>
+                    </div>
+                </div>
+                <p>S’ajoutant à cela d’autres techniques comme l’utilisation des plantes (phytothérapie), les huiles essentielles
+                    (aromathérapie), l’utilisation de l’eau (hydrologie), la réflexologie, la respiration, la relaxation, les
+                    fleurs de Bach, et bien d’autres …</p>
+            </div>
+            <div class="citations">
+                <div class="citations__author">
+                    <div class="citations__author--content">
+                        <p>Ceux qui ne consacrent pas un peu de temps chaque jour à
+                            leur santé, consacreront un jour beaucoup de temps
+                            à leur maladie. </p>
+                        <p class="author">Kneipp</p>
+                    </div>
+                    <img class="citations__author--img" src="{{ asset('build/assets/images/kneipp.jpg') }}" alt="portrait de Kneipp">
+                </div>
+            </div>
+        </article>
+    </section>
+{#End of section "La naturopathie c'est quoi"#}
+    <section class="naturopathy__footer">
+        <h2 class="titleH2">La naturopathie c'est pour qui ?</h2>
+        <p>La pleine santé, c’est pour qui ? Telle est la véritable  question. L’approche de la naturopathie est avant
+            tout préventive. Elle s’adresse donc à tous. Du nourrisson au sénior. </p>
+        <div class="pathology">
+            <div class="pathology__list">
+                <div class="pathology__list--content">
+                    <h3 class="row_list">Troubles digestif</h3>
+                    <ul>
+                        <li class="list_type">Douleur</li>
+                        <li class="list_type">Ballonements</li>
+                        <li class="list_type">Brûlures</li>
+                        <li class="list_type">Transit perturbé</li>
+                    </ul>
+                    <h3 class="row_list">Hormonaux</h3>
+                    <ul>
+                        <li class="list_type">Adolescence</li>
+                        <li class="list_type">Fertilité</li>
+                        <li class="list_type">Grossesse</li>
+                        <li class="list_type">Trouble du cycle</li>
+                        <li class="list_type">Ménopause</li>
+                    </ul>
+                </div>
+                <img src="{{ asset('build/assets/images/alimentation_saine_et_varie.jpg') }}" alt="alimentation saine demonstration">
+            </div>
+            <div class="pathology__list">
+                <div class="pathology__list--content">
+                    <h3 class="row_list">infections</h3>
+                    <ul>
+                        <li class="list_type">ORL</li>
+                        <li class="list_type">Génitales</li>
+                        <li class="list_type">Cutanées</li>
+                    </ul>
+                    <h3 class="row_list">Tout autre trouble</h3>
+                    <ul>
+                        <li class="list_type">Problèmes de peau</li>
+                        <li class="list_type">Troubles ostéo articulaires</li>
+                        <li class="list_type">Gestion du stress</li>
+                        <li class="list_type">Fatigue</li>
+                        <li class="list_type">Revitalisation</li>
+                        <li class="list_type">Perte de poids</li>
+                        <li class="list_type">Restructuration alimentaires</li>
+                        <li class="list_type">Etc ...</li>
+                    </ul>
+                </div>
+                <img src="{{ asset('build/assets/images/Gemmothérapie.jpg') }}" alt="alimentation saine demonstration">
+            </div>
+        </div>
+        <p>C’est pour quoi j’accompagne tout le monde, dans sa démarche santé.</p>
+        <a class="btn_secondary btn_text" href="{{ path('app_contact') }}">Prendre RDV</a>
+    </section>
+
+{% endblock %}
+
+

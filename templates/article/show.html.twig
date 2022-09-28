@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block meta %}
+    <meta name="description" content="{{ article.description }}"/>
+    <meta property="og:title" content= " {{article.title }} "/>
+    <meta property="og:description" content="{{ article.description }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ path('app_article_show', {slug: article.slug}) }}" />
+    <meta property="og:image" content="/build/assets/images/{{ article.media.fileName }}" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue à Ambarès-et-Lagrave" />
+{% endblock meta %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block body %}
+    {% include 'flash_message/_flash_success.html.twig' %}
+    <section class="article">
+{#        <a class="returnLink" href="{{ path('app_category_show', {slug: category.slug}) }}">revenir à la liste des articles</a>#}
+        <article>
+            <h1 class="titleH1">{{ article.title }}</h1>
+            <p class="publishedAt">Publié le : {{ article.createdAt | date('d-m-y') }}</p>
+            <div class="article__flex">
+                <img src="/build/assets/images/{{ article.media.fileName }}" alt="{{ article.media.alt }}">
+                <div class="article__flex--content">
+                    <p>{{ article.content | raw }}</p>
+                </div>
+            </div>
+        </article>
+    </section>
+{#Comments section#}
+    <div class="comments form">
+        <h4 class="titleH4"><span>{{article.comments|length}} commentaire(s)</span></h4>
+        <div class="form__content">
+            {% for comment in article.comments %}
+                <div class="user__comment">
+                    <p>Posté le: {{ comment.createdAt | date('d-m-y') }}</p>
+                    <p class="user__comment--username">Par: {{ comment.user.username}}</p>
+                    <p>{{ comment.content }}</p>
+                </div>
+            {% endfor %}
+            {%if app.user%}
+                {{ form_start(commentForm) }}
+                <div class="contactItems_textArea">
+                    {{ form_row(commentForm.content) }}
+                </div>
+                {{ form_end(commentForm) }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

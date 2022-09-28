@@ -1,0 +1,39 @@
+.header__top {
+  padding: 20px 0;
+  @include flex(space-around, center);
+  img {
+    width: 150px;
+  }
+  &--content {
+    width: 65%;
+    @include flex(space-between, center);
+  }
+}
+
+.header__items {
+  @include flex(center,center);
+  &>i {
+    color: $white;
+    margin: 0;
+    align-self: flex-end;
+    }
+  &--content {
+    margin-left: 5px;
+    &>a {
+      display: block;
+      &:not(:first-child) {
+        padding-top: 12px;
+        color: $green;
+      }
+    }
+    &>p:not(:first-child) {
+      padding-top: 12px;
+      color: $green;
+    }
+  }
+}
+
+.header__items--title {
+  font-family: "AVE_B", serif;
+  text-transform: uppercase;
+}

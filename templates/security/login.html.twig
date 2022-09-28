@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+{% block meta %}
+    <meta name="description" content="Connectez sur le site de Nicolas Guidoux Naturopathe à Bordeaux - Ambarès-et-Lagrave et commentez vos articles préférés"/>
+    <meta property="og:title" content= "Connexion"/>
+    <meta property="og:type" content="page" />
+    <meta property="og:url" content=" {{ path ('app_login') }}" />
+    <meta property="og:image" content="{{ asset ('build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png') }}" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue" />
+{% endblock meta %}
+
+{% block body %}
+    <section class="form" id="login">
+        <h1 class="titleH1">Se connecter</h1>
+        <form method="post" class="form__content">
+            {% if error %}
+                <div class="alerte__message">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            {% if app.user %}
+                {{ path('home') }}
+            {% endif %}
+            <div class="form__content--input">
+                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" autocomplete="email" placeholder="votre@email.com" required autofocus>
+                <input type="password" name="password" id="inputPassword" autocomplete="current-password" placeholder="Mot de passe" required>
+             </div>
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+{#                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.#}
+{#                See https://symfony.com/doc/current/security/remember_me.html#}
+                <div class="form__content--checkboxes">
+                    <label>
+                        <input type="checkbox" name="_remember_me" class="checkboxes"> Se souvenir de moi
+                    </label>
+                </div>
+            <div>
+                <a class="forgot_password" href="{{ path ('app_forgot_password_request')}}">Mot de passe oublié ?</a>
+            </div>
+            <button class="btn_primary btn_text cursor_pointer" type="submit">
+                connexion
+            </button>
+        </form>
+    </section>
+{% endblock %}

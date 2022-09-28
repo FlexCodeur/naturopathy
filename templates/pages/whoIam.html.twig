@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title%} Qui suis-je ?{% endblock %}
+{% block meta %}
+    <meta name="description" content="Commercial de formation, j’ai rapidement préféré m’écarter de cette profession très chronophage afin d’avoir plus de temps libre, et notamment pratiquer la musique. Pendant 5 ans je me suis consacré à cette passion, qui m’a conduit à vivre entre Bordeaux et New York principalement."/>
+    <meta property="og:description" content="Commercial de formation, j’ai rapidement préféré m’écarter de cette profession très chronophage afin d’avoir plus de temps libre, et notamment pratiquer la musique. Pendant 5 ans je me suis consacré à cette passion, qui m’a conduit à vivre entre Bordeaux et New York principalement."/>
+    <meta property="og:title" content= " Qui suis-je "/>
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ path('who_iam') }}" />
+    <meta property="og:image" content="/build/assets/images/nicolas-guidoux-qui-suis-je.jpg" />
+    <meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue à Ambarès-et-Lagrave" />
+{% endblock meta %}
+
+{% block body %}
+    <section class="who">
+        <article>
+            <h1 class="titleH1">Qui suis-je ?</h1>
+            <div class="who__flex">
+                <img src="{{ asset ('build/assets/images/nicolas-guidoux-qui-suis-je.jpg')}}" alt="photo de Nicolas Guidoux naturopathe - iridologue">
+                <div class="who__flex--content">
+                    <p>Commercial de formation, j’ai rapidement préféré m’écarter de cette profession très chronophage
+                        afin d’avoir plus de temps libre, et notamment pratiquer la musique.
+                        Pendant 5 ans je me suis consacré à cette passion, qui m’a conduit à vivre entre Bordeaux et
+                        New York principalement.
+                    </p>
+                    <p>Un parcours riche, en expérience, en voyages, en rencontres… mais très épuisant.
+                        Une vie plutôt nocturne, nomade, stressante, une alimentation inadaptée, qui, évidemment, ont
+                        eu un impact négatif sur ma santé. Autant d’épreuves qui m’ont conduit à me recentrer sur des
+                        choses plus simples, mais si essentielles du quotidien.
+                    </p>
+                    <p>En parallèle, mon chemin d’évolution personnelle m’amenait à rencontrer des thérapeutes en
+                        médecine non conventionnelle, à revoir mon alimentation, à apprendre a gérer mon stress,…
+                        Les bénéfices obtenus sur ma santé furent assez bluffants !
+                        J’ai aussi été témoin de résultats incroyables sur des membres de mon entourage qui ont pu
+                        retrouver une pleine santé grâce à des techniques naturelles, dont la naturopathie.</p>
+                </div>
+            </div>
+            <div class="who__footer">
+                <p>Lors de mon parcours dans la musique, j’ai eu l’occasion d’intervenir dans des foyers, des collèges, des Espaces Jeunes afin de transmettre mon savoir.
+                    Le partage est pour moi une des valeurs les plus importantes qu’il soit. Cette valeur, je l’applique au quotidien dans mon cabinet en essayant de vous
+                    rendre le plus autonome possible.
+                </p>
+                <p>Après des années de lectures, de participation à des conférences, de rencontres riches avec différents thérapeutes, le 1er confinement a été un déclic
+                    pour moi. Un déclic qui m’a permis de me lancer définitivement dans le milieu de la santé naturelle, ce qui me titillait déjà depuis un bon moment.
+                </p>
+                <p>Je me suis donc formé au sein de l’école Euronature, 1ère école de formation de naturopathie créée en 1983 et co-créatrice de la FENA (Fédération
+                    des Ecoles de Naturopathie).
+                    Seulement 8 écoles de naturopathie sont aujourd’hui reconnues par la FENA en France, qui est un gage de sérieux et d’une formation de qualité</p>
+            </div>
+        </article>
+    </section>
+    <section class="discovery">
+        <h2 class="titleH2">Découvrez également</h2>
+        <div class="discovery__content">
+            <div class="discovery__content--items">
+                <i class="fa-solid fa-newspaper"></i>
+                {% for category in categories%}
+                <a href="{{path('app_category_show', {'slug': category.slug})}}" class="titleH3">Le blog</a>
+                {%endfor%}
+            </div>
+            <div class="discovery__content--items">
+                <i class="fas fa-pagelines"></i>
+                <a href="{{ path('naturopathy') }}" class="titleH3">La naturopathie</a>
+            </div>
+            <div class="discovery__content--items">
+                <i class="fa-solid fa-calendar-check"></i>
+                <a href="{{path('app_contact')}}" class="titleH3">Prendre RDV</a>
+            </div>
+        </div>
+    </section>
+{%endblock%}

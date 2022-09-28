@@ -1,0 +1,219 @@
+.header__top {
+  padding: 15px 0;
+  @include flex(space-evenly, center);
+  @include respond("tabPort") {
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 2000;
+  }
+  img {
+    width: 110px;
+    height: 110px;
+    @include respond('tabLand') {
+      width: 80px;
+      height: 80px;
+    }
+    @include respond('tabPort') {
+      width: 70px;
+      height: 70px;
+    }
+    @include respond("mobile") {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  &--content {
+    width: 65%;
+    @include flex(space-around, center);
+    @include respond("tabPort") {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.header__items {
+  font-size: 13px;
+  @include flex(center, center);
+  @include respond('tabLand') {
+    font-size: 10px;
+  }
+  @include respond("tabPort") {
+    position: relative;
+    flex-direction: column;
+    margin-right: 15px;
+  }
+  & > i {
+    color: $white;
+    margin: 0;
+  }
+  &--content {
+    margin-left: 5px;
+    & > a {
+      display: block;
+      &:not(:first-child) {
+        padding-top: 12px;
+        @include respond('tabLand') {
+          padding-top: 8px;
+        }
+        &:hover {
+          color: $green;
+        }
+
+        @include respond("tabPort") {
+          color: $white;
+        }
+      }
+    }
+    & > p:not(:first-child) {
+      padding-top: 12px;
+      color: $dark;
+      @include respond('tabLand') {
+        padding-top: 8px;
+      }
+      @include respond("tabPort") {
+        color: $white;
+      }
+    }
+  }
+}
+.header__items--connect {
+  position: relative;
+  @extend .header__items--title;
+  margin-left: 5px;
+  @include respond('tabPort') {
+    display: none;
+    margin-left: 0;
+  }
+}
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: 15px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.31);
+  padding: 15px;
+  background-color: $sand;
+  text-align: center;
+  z-index: 100;
+  @include respond('tabPort') {
+    background-color: $primaryColor;
+    color: white;
+    border: none;
+    left: -45px;
+    top: 150%;
+    transform: translateX(-25%);
+    width: 93px;
+  }
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-right: 15px solid transparent;
+    border-bottom: 20px solid $sand;
+    border-left: 15px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    left: 10px;
+    @include respond('tabPort') {
+      border-bottom: 20px solid $primaryColor;
+      right: 16px;
+      left: unset;
+    }
+  }
+  &> li:not(:last-child) {
+    padding-bottom: 10px;
+  }
+  .dropdown_item {
+    white-space: nowrap;
+    padding: 5px;
+    @extend .header__items--title;
+  }
+}
+
+#address_header {
+  @include respond("tabPort") {
+    display: none;
+    margin-top: 15px;
+    position: absolute;
+    top: 150%;
+    background-color: $primaryColor;
+    width: 160px;
+    padding: 15px;
+    border-radius: 5px;
+    right: -12px;
+    color: white;
+    z-index: 100;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.31);
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid $primaryColor;
+      border-left: 15px solid transparent;
+      position: absolute;
+      bottom: 100%;
+      right: 13px;
+    }
+  }
+}
+
+#contact_header {
+  @include respond("tabPort") {
+    display: none;
+    margin-top: 15px;
+    position: absolute;
+    top: 150%;
+    background-color: $primaryColor;
+    width: 160px;
+    padding: 15px;
+    border-radius: 5px;
+    right: -12px;
+    color: white;
+    z-index: 100;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.31);
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 0;
+      width: 0;
+      border-right: 15px solid transparent;
+      border-bottom: 20px solid #446237;
+      border-left: 15px solid transparent;
+      position: absolute;
+      bottom: 100%;
+      right: 13px;
+    }
+  }
+}
+
+.header__items.btn_green {
+  @include respond("tab") {
+    display: none;
+  }
+}
+
+.header__items--title {
+  font-family: "AVE_B", serif;
+  text-transform: uppercase;
+}
+
+.header__items--mobile {
+  font-size: 10px;
+  display: none;
+  @include respond("tabPort") {
+    display: block;
+  }
+}

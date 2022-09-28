@@ -1,0 +1,19 @@
+{% set article_show = path('app_article_show', {slug: article.slug}) %}
+
+<div class="actualites">
+    <article class="news_items">
+        {% if article.media != null %}
+            <img src="{{url('home') }}build/assets/images/{{ article.media.fileName }}" alt="{{ article.media.alt }}">
+        {% else %}
+            <img src="{{ asset('build/assets/images/no-image.jpg') }}" alt="image non disponible">
+        {% endif %}
+        <div class="news_item_content">
+            <p class="date_news">Publié le : {{ article.createdAt | date ('d-m-y') }}</p>
+            <h3 class="titleH3">
+                <a href="{{ path('app_article_show', {slug: article.slug}) }}">{{ article.title }}</a>
+            </h3>
+            <p>{{ article.content[:150] | raw }}</p>
+            <a class="date_news" href="{{ path('app_article_show', {slug: article.slug}) }}">LIRE LA SUITE</a>
+        </div>
+    </article>
+</div>

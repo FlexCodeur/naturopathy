@@ -1,0 +1,3 @@
+{% for article in articles | sort((a,b)=>b.createdAt > a.createdAt) %}
+    {% include 'article/_previewArticlesHome.html.twig' %}
+{% endfor %}

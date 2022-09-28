@@ -1,0 +1,25 @@
+//Comment form on articles
+.comments {
+  margin-top: 80px;
+  .titleH4 {
+    margin: 0 0 25px 80px;
+    color: $secondaryColor;
+  }
+  .form__content {
+    text-align: left;
+    margin-left: 80px;
+    width: 50%;
+    .user__comment {
+      margin: 0 0 25px;
+      & > p {
+        padding-bottom: 15px;
+        &:not(:last-child) {
+          font-weight: 600;
+        }
+      }
+    }
+    & .btn_primary {
+      width: 22%;
+    }
+  }
+}

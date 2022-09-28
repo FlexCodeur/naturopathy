@@ -1,0 +1,369 @@
+// Banner naturopathy
+.naturopathy__banner {
+  color: $white;
+  text-align: center;
+  text-transform: uppercase;
+  @include background("complements-alimentaires-en-naturopathie.jpeg", center, cover, no-repeat);
+  &--filter {
+    padding: 220px 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    @include respond("laptopExtra") {
+      padding: 160px 0;
+    }
+    @include respond("smallLaptop") {
+      padding: 140px 0;
+    }
+    @include respond("tabLand") {
+      padding: 110px 0;
+    }
+    @include respond("tabPort") {
+      padding: 90px 0;
+    }
+    & > .title {
+      font-size: 68px;
+      @include respond("laptopExtra") {
+        font-size: 48px;
+      }
+      @include respond("smallLaptop") {
+        font-size: 40px;
+      }
+      @include respond("tabLand") {
+        font-size: 35px;
+      }
+      @include respond("tabPort") {
+        font-size: 30px;
+      }
+      @include respond("mobileLarge") {
+        font-size: 24px;
+      }
+      @include respond("mobile") {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+//h2 style
+.naturopathy__page {
+  & > h2 {
+    margin: 80px 0;
+    @include respond("tabLand") {
+      margin: 60px 0;
+    }
+    @include respond("mobileLarge") {
+      margin: 40px 0;
+    }
+  }
+}
+
+//Flex container "La naturopathie c'est quoi" pictures + text
+.naturopathy__flex {
+  font-size: 22px;
+  padding: 60px 0;
+  @include respond("laptopExtra") {
+    font-size: 20px;
+  }
+  @include respond("tabLand") {
+    font-size: 18px;
+  }
+  @include respond("tab") {
+    font-size: 16px;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 0;
+  }
+  @include flex(center, center);
+  & > img {
+    max-width: 380px;
+    border-radius: 5px;
+    margin-right: 50px;
+    @include respond("tabLand") {
+      max-width: 360px;
+      margin-right: 30px;
+    }
+    @include respond("tab") {
+      max-width: 320px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    @include respond("mobileLarge") {
+      max-width: 260px;
+    }
+  }
+  &--content {
+    width: 55%;
+    line-height: 32px;
+    @include respond("laptopExtra") {
+      line-height: 26px;
+    }
+    @include respond("tabLand") {
+      line-height: 22px;
+    }
+    @include respond("tab") {
+      width: 80%;
+    }
+    & > h3 {
+      position: relative;
+      font-size: 28px;
+      padding-bottom: 30px;
+      margin-left: 25px;
+      @include respond("laptopExtra") {
+        font-size: 25px;
+      }
+      @include respond("tabLand") {
+        font-size: 20px;
+      }
+      @include respond("tab") {
+        padding-bottom: 20px;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+      }
+      @include respond("mobileLarge") {
+        font-size: 16px;
+        top: 20px;
+      }
+      &::before {
+        content: "\f111";
+        font-family: "FontAwesome";
+        font-size: 15px;
+        position: absolute;
+        color: $secondaryColor;
+        left: -25px;
+        @include respond("laptopExtra") {
+          font-size: 14px;
+        }
+        @include respond("tabLand") {
+          font-size: 12px;
+          left: -20px;
+        }
+        @include respond("mobileLarge") {
+          font-size: 8px;
+          left: -15px;
+        }
+      }
+    }
+    & > p {
+      padding-bottom: 30px;
+      @include respond("tab") {
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+
+// "Hygiénisme" elements
+#naturopathy__article {
+  @include respond("tab") {
+    position: relative;
+    padding-top: 40px;
+  }
+}
+.naturopathy__hygienisme--content {
+  font-size: 22px;
+  margin: $mxAuto;
+  @extend .naturopathy__flex--content;
+  width: 80%;
+  @include respond("tabLand") {
+    font-size: 18px;
+  }
+  @include respond("tabPort") {
+    font-size: 16px;
+  }
+  & > h3 {
+    @include respond("tab") {
+      top: 0 !important;
+      font-size: 18px;
+    }
+  }
+  & > a {
+    margin-top: 25px;
+    @include respond("tabPort") {
+      margin-top: 15px;
+    }
+  }
+}
+
+.hygienisme__content {
+  text-align: center;
+  padding: 0 0 10px;
+  @include flex(space-around, flex-start);
+  @include respond("tabPort") {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @include respond("mobileLarge") {
+    padding: 0 0 15px;
+  }
+  &--items {
+    @include flex(center, center, $dir: column);
+    & > i {
+      background: $green;
+      color: white;
+      font-size: 92px;
+      border-radius: 30px;
+      width: 150px;
+      height: 150px;
+      padding: 15px;
+      @include flex(center, center);
+      @include respond("laptopExtra") {
+        width: 120px;
+        height: 120px;
+        font-size: 80px;
+      }
+      @include respond("tabLand") {
+        width: 90px;
+        height: 90px;
+        font-size: 60px;
+      }
+      @include respond("tabPort") {
+        width: 80px;
+        height: 80px;
+      }
+      @include respond("mobileLarge") {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+        border-radius: 20px;
+      }
+      @include respond("mobile") {
+        width: 40px;
+        height: 40px;
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.hygienisme__items--title {
+  color: $secondaryColor;
+  font-size: 26px;
+  text-transform: uppercase;
+  margin: 30px 0;
+  font-weight: 600;
+  @include respond("laptop") {
+    font-size: 22px;
+  }
+  @include respond("tabLand") {
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  @include respond("tab") {
+    font-size: 18px;
+  }
+}
+
+//Override citations Style
+.naturopathy__page {
+  .citations {
+    background: rgb(246, 246, 246);
+    margin: 120px 0;
+    padding: 120px 0;
+    @include respond("smallLaptop") {
+      margin: 80px 0;
+      padding: 80px 0;
+    }
+    @include respond("tabLand") {
+      margin: 60px 0;
+      padding: 60px 0;
+    }
+    @include respond("mobileLarge") {
+      margin: 40px 0;
+      padding: 40px 0;
+    }
+    &__author {
+      @include respond('tabPort') {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+// Section "La naturopathie c'est pour qui ?"
+.naturopathy__footer {
+  padding-bottom: 150px;
+  @extend .naturopathy__hygienisme--content;
+  @include respond("laptop") {
+    padding-bottom: 90px;
+  }
+  @include respond("tabLand") {
+    padding-bottom: 70px;
+
+  }
+  @include respond("mobileLarge") {
+    padding-bottom: 30px;
+  }
+  & > h2 {
+    margin: 40px 0 80px;
+    @include respond("mobileLarge") {
+      margin: 0 0 40px;
+      font-size: 16px;
+      white-space: nowrap;
+    }
+  }
+  & > p {
+    @include respond("mobileLarge") {
+      padding-bottom: 0;
+    }
+  }
+}
+.pathology {
+  padding: 0 0 50px;
+  margin: 0 50px;
+  @include respond("tabLand") {
+    padding: 20px 0 30px;
+  }
+  @include respond("tabPort") {
+    padding: 10px 20px;
+    margin: 0;
+  }
+  &__list {
+    margin-top: 50px;
+    @include flex(space-between, center);
+    @include respond("tabLand") {
+      margin-top: 25px;
+    }
+    @include respond("tabPort") {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    @include respond("tabPort") {
+      margin-top: 0;
+    }
+    & ul {
+      position: relative;
+      margin-left: 50px;
+      @include respond("tabLand") {
+        margin-left: 40px;
+      }
+      @include respond("tabPort") {
+        margin-left: 25px;
+      }
+    }
+    & img {
+      width: 50%;
+      @include respond("tabPort") {
+        order: 1;
+        margin-top: 15px;
+        width: 80%;
+      }
+      @include respond("mobileLarge") {
+        width: 100%;
+      }
+    }
+    &--content {
+      @include respond("tabPort") {
+        order: 2;
+      }
+    }
+  }
+  & > p {
+    margin: 35px 0;
+    @include respond("tab") {
+      margin: 20px 0;
+    }
+  }
+}

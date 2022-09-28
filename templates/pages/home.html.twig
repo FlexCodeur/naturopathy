@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+{% block meta %}
+<meta name="description" content="Nicolas Guidoux Naturopathe, Iridologue à Ambarès-et-Lagrave près de Bordeaux. Consultations par visio-conférence ou en cabinet, vous pouvez prendre RDV en ligne ou par téléphone."/>
+<meta property="og:title" content= "Bienvenue sur le site de Nicolas Guidoux Naturopathe irridologue à Ambarès-et-Lagrave"/>
+<meta property="og:description" content= "Nicolas Guidoux Naturopathe, Iridologue à Ambarès-et-Lagrave près de Bordeaux. Consultations par visio-conférence ou en cabinet, vous pouvez prendre RDV en ligne ou par téléphone."/>
+<meta property="og:type" content="website" />
+<meta property="og:url" content=" {{ path ('home') }}" />
+<meta property="og:image" content="{{ asset ('build/assets/images/nicolas-guidoux-naturopathe-iridologue-logo.png') }}" />
+<meta property="og:site_name" content="Nicolas Guidoux | Naturopathe - Iridologue" />
+{% endblock meta %}
+
+{% block body %}
+    {#Home Banner style#}
+    <div class="banner">
+        <div class="banner__card">
+            <h1 class="title">Educateur de santé <span class="green">naturopathe</span> et <span class="orange">iridologue</span></h1>
+            <p>La force qui est en chacun de nous est notre plus grand médecin</p>
+            <p class="author">Hippocrate</p>
+            <a class="btn_secondary btn_text" href="{{ path('app_contact') }}">Prendre RDV</a>
+        </div>
+    </div>
+
+    {#Section "Qui suis-je"#}
+    <section class="who__iam">
+        <h2 class="titleH2">qui suis-je</h2>
+        <article class="who__iam--content">
+            <img src="{{ asset('build/assets/images/nicolas-guidoux-qui-suis-je.jpeg') }}" class="who__img--item"></img>
+            <div class="who__description--item">
+                <p>Je suis Nicolas Guidoux, diplômé de l’Institut
+                    EuroNature à Bordeaux, la 1ère école de Naturopathie française.
+                    Praticien de santé naturopathe et iridologue, affilié à la
+                    Fédération Française de Naturopathie (Fenahman).
+                </p>
+                <p>Adhérent à l’Organisation de la Médecine Naturelle et
+                    de l’Education Sanitaire (Omnes), je suis membre
+                    du Syndicat Professionnel de la Naturopathie (SNP).</p>
+                <a class="btn_secondary btn_text" href="{{ path('who_iam') }}">En savoir +</a>
+            </div>
+        </article>
+    </section>
+    {#End of section "Qui suis-je#}
+
+    {#Section "La naturopathie c'est quoi?"#}
+    <section class="naturopathy">
+        <article class="naturopathy__content">
+            <h2 class="titleH2">La naturopathie c'est quoi ?</h2>
+            <p>Reconnue par l’OMS, la naturopathie est une médecine traditionnelle, au même titre que la médecine
+                traditionnelle chinoise ou indienne. L’approche naturopathique est basée sur des savoirs, et des pratiques
+                ancestrales inspirées d’Hippocrate( IVème siècle avant J-C ).
+            </p>
+            <p>L’approche de la naturopathie est avant tout préventive. Elle permet de favoriser l’auto guérison, ramener
+                l’organisme à l’équilibre, et préserver une parfaite santé à l’aide de techniques naturelles.</p>
+        </article>
+        {#  Absolute item "naturopathy"  #}
+        <div class="naturopathy__extra--item">
+            <img src="{{ asset('build/assets/images/homeopathie-illustration.png') }}" alt="homeopathie illustration">
+            <p><strong>En naturopathie, nous travaillons sur 3 axes principaux :</strong>
+            <ul>
+                <li>– L’alimentation.</li>
+                <li>– L’activité physique.</li>
+                <li>– La gestion des émotions.</li>
+            </ul>
+            <p>J’utilise également d’autres techniques que je vous laisse découvrir.</p>
+            <a class="btn_primary btn_text" href="{{ path('naturopathy') }}">Découvrir</a>
+        </div>
+    </section>
+    {#End of section "La naturopathie c'est quoi?#}
+
+    {#Section citations#}
+    <section class="citations">
+        <div class="citations__author slider_citations">
+            <div class="slider_block">
+                <div class="citations__author--content">
+                    <p>Ceux qui ne consacrent pas un peu de temps chaque jour à
+                        leur santé, consacreront un jour beaucoup de temps
+                        à leur maladie. </p>
+                    <p class="author">Kneipp</p>
+                </div>
+                <img class="citations__author--img" src="{{ asset('build/assets/images/kneipp.jpg') }}" alt="Photo de Kneipp">
+            </div>
+            <div class="slider_block">
+                <div class="citations__author--content">
+                    <p>La santé n’est pas simplement l’absence de maladie.
+                        C’est un véritable état physique, psychique et mental. </p>
+                    <p class="author">Hildegarde Von Bingen</p>
+                </div>
+                <img class="citations__author--img" src="{{ asset('build/assets/images/hildegarde-von-bingen.jpg') }}" alt="photo de Hildegarde-Von-Bingen">
+            </div>
+            <div class="slider_block">
+                <div class="citations__author--content">
+                    <p>Le microbe n’est rien, c’est le terrain qui est tout.</p>
+                    <p class="author">Claude Bernard</p>
+                </div>
+                <img class="citations__author--img" src="{{ asset('build/assets/images/claude-bernard.jpg') }}" alt="photo de Claude Bernard">
+            </div>
+            <div class="slider_block">
+                <div class="citations__author--content">
+                    <p>L’homme qui se fait vieux avant l'âge perd toute
+                        vitalité et sa gaieté</p>
+                    <p class="author">Auguste-Louis Petiet</p>
+                </div>
+                <img class="citations__author--img" src="{{ asset('build/assets/images/august-louis-peliet.jpg') }}" alt="portrait de Auguste-Louis Petiet">
+            </div>
+            <div class="slider_block">
+                <div class="citations__author--content">
+                    <p>La science véritable est la science des causes.</p>
+                    <p class="author">Francis Bacon</p>
+                </div>
+                <img class="citations__author--img" src="{{ asset('build/assets/images/francis_bacon.jpg') }}" alt="portrait de Francis Bacon">
+            </div>
+        </div>
+    </section>
+    {#End of Section citations#}
+
+    {#Section Blog#}
+    <section class="blog">
+        <h2 class="titleH2">Les derniers articles</h2>
+        <div class="blog__content">
+            <div class="blog__content--cards">
+                {%  include 'article/_previewArticlesHomeList.html.twig' %}
+            </div>
+        </div>
+        {% include 'category/_btnCategoriesWidget.html.twig' %}
+    </section>
+{% endblock body %}

@@ -1,0 +1,137 @@
+// Article section
+.blog__content {
+  margin-bottom: 35px;
+  .blog__content--cards {
+    @include flex(space-between, stretch, $wrap: wrap);
+    width: 85%;
+    margin: $mxAuto;
+    @include respond('smallLaptop') {
+      justify-content: center;
+    }
+    @include respond('tab') {
+      flex-direction: column;
+      width: 80%;
+    }
+  }
+}
+.actualites {
+  border: $borderSolidDark;
+  margin: 0 10px 20px;
+  padding: 0 0 40px;
+  width: 30%;
+  @include respond("laptop") {
+    width: 70%;
+    margin: 0 20px;
+  }
+  @include respond("smallLaptop") {
+    width: 85%;
+    margin: 15px auto;
+  }
+  @include respond("tab") {
+    width: 100%;
+    margin: 15px auto;
+  }
+  @include respond("tabPort") {
+    margin: 10px 0;
+  }
+  @include respond("mobileLarge") {
+    padding: 0;
+  }
+  .news_items {
+    //@include respond()
+    &:not(:last-child) {
+      margin-right: 40px;
+      @include respond("tabLand") {
+        margin: 0 auto 40px;
+      }
+      @include respond("tab") {
+        margin: 0 auto 40px;
+      }
+      @include respond("mobileLarge") {
+        margin: 0 auto 40px;
+      }
+      @include respond("mobileLarge") {
+        margin: 0 auto 40px;
+      }
+    }
+    img {
+      width: 100%;
+      display: block;
+      margin: $mxAuto;
+      object-fit: cover;
+    }
+    .news_item_content {
+      padding: 35px 25px;
+      line-height: 34px;
+      @include respond('tabPort') {
+        line-height: 24px;
+      }
+      @include respond('tabPort') {
+        line-height: 20px;
+        padding: 20px;
+      }
+      .date_news {
+        font-size: 14px;
+        color: $primaryColor;
+        font-weight: 600;
+        padding: 15px 0;
+
+        @include respond("tabPort") {
+          font-size: 12px;
+        }
+        @include respond("mobileLarge") {
+          font-size: 10px;
+        }
+      }
+      .comments {
+        margin-top: 20px;
+        font-size: 18px;
+        @include respond('tabLand') {
+          font-size: 16px;
+        }
+        @include respond('tabPort') {
+          font-size: 14px;
+        }
+        @include respond('mobileLarge') {
+          font-size: 12px;
+        }
+        a {
+          color: #323232;
+        }
+      }
+      & > p {
+        font-size: 20px;
+        @include respond('tabLand') {
+          font-size: 18px;
+        }
+        @include respond('tabPort') {
+          font-size: 16px;
+        }
+        @include respond('mobileLarge') {
+          font-size: 14px;
+        }
+      }
+      & div {
+        font-size: 28px;
+        @include respond('mobileLarge') {
+          font-size: 18px;
+        }
+      }
+      h3 {
+        color: $secondaryColor;
+        padding-bottom: 20px;
+        font-weight: 700;
+        @include font("JOST_R", 26);
+        @include respond('smallLaptop') {
+          font-size: 20px;
+        }
+        @include respond('tabPort') {
+          font-size: 18px;
+        }
+        @include respond('mobileLarge') {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

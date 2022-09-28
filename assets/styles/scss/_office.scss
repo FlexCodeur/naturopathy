@@ -1,0 +1,210 @@
+.office_top {
+  font-size: 22px;
+  padding: 0 10%;
+  @include respond("tabLand") {
+    font-size: 18px;
+    padding: 0 6%;
+  }
+  @include respond("tab") {
+    font-size: 16px;
+    padding: 0 4%;
+  }
+  h1 {
+    margin: 80px 0;
+    @include respond("tabLand") {
+      margin: 60px 0;
+    }
+    @include respond("tabPort") {
+      margin: 40px 0;
+    }
+  }
+  p {
+    line-height: 25px;
+    @include respond("tabPort") {
+      line-height: 20px;
+    }
+  }
+}
+
+.office_single_page {
+  background-color: inherit;
+  padding: 20px 10%;
+  .office__content--cards {
+    align-items: stretch;
+    @include respond("tabPort") {
+      margin-top: 0;
+    }
+    .office__content--cards-items {
+      border: 1px solid rgba(139, 158, 131, 0.5);
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+      padding: 70px 0 30px;
+      @include respond("tabPort") {
+        width: 90%;
+        margin: 0 auto 20px;
+      }
+      svg {
+        path {
+          fill: $secondaryColor;
+        }
+      }
+      h3 {
+        color: $secondaryColor;
+      }
+    }
+  }
+  & > a {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.office__reassurance--content {
+  padding: 40px 30px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.office__rdv {
+  padding: 50px 0;
+  @include flex(center, stretch);
+  @include respond("tabPort") {
+    padding: 30px 0;
+    flex-direction: column;
+  }
+  & > img {
+    width: 70%;
+    @include respond("tab") {
+      width: 55%;
+    }
+    @include respond("tabPort") {
+      width: auto;
+    }
+  }
+  &--sidebar {
+    background-color: $stone;
+    position: relative;
+    width: 100%;
+    color: $brown;
+    padding: 0 3.5%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    @include respond("tabPort") {
+      width: auto;
+      padding: 0 10%;
+    }
+    & > h2 {
+      font-size: 32px;
+      text-transform: uppercase;
+      margin: 50px 0 40px;
+      text-align: center;
+      position: relative;
+      @include respond("extraLarge") {
+        font-size: 28px;
+      }
+      @include respond("large") {
+        font-size: 24px;
+      }
+      @include respond("laptopExtra") {
+        font-size: 22px;
+      }
+      @include respond("laptop") {
+        font-size: 20px;
+      }
+      @include respond("smallLaptop") {
+        font-size: 18px;
+      }
+      @include respond("tabPort") {
+        margin: 30px 0 20px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background: $green;
+        border-radius: 50%;
+        @include respond("laptop") {
+          width: 10px;
+          height: 10px;
+        }
+        @include respond("smallLaptop") {
+          width: 8px;
+          height: 8px;
+        }
+        @include respond("tab") {
+          left: 20%;
+        }
+        @include respond("tabPort") {
+          display: none;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        background: $green;
+        border-radius: 50%;
+        @include respond("laptop") {
+          width: 10px;
+          height: 10px;
+        }
+        @include respond("smallLaptop") {
+          width: 8px;
+          height: 8px;
+        }
+        @include respond("tab") {
+          right: 20%;
+        }
+        @include respond("tabPort") {
+          display: none;
+        }
+      }
+    }
+    & > img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include respond("tab") {
+        display: none;
+      }
+    }
+  }
+}
+
+.open_days {
+  font-size: 24px;
+  @include respond("large") {
+    font-size: 22px;
+  }
+  @include respond("laptopExtra") {
+    font-size: 20px;
+  }
+  @include respond("laptop") {
+    font-size: 18px;
+  }
+  @include respond("smallLaptop") {
+    font-size: 16px;
+  }
+  & > div {
+    @include flex(space-between, center);
+    padding: 25px 0;
+    @include respond("laptop") {
+      padding: 15px 0;
+    }
+  }
+}
+
+.btn_office {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
+}

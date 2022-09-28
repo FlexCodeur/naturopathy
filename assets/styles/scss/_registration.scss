@@ -1,0 +1,59 @@
+// inputs password style and button
+#form__registration {
+    padding: 60px 80px;
+  @include respond('tabPort') {
+    padding: 30px;
+  }
+  .form__content--input {
+    margin-bottom: 25px;
+  }
+  & > button {
+    margin-top: 30px;
+  }
+  .rgpd_checkbox > div {
+      margin-left: 0;
+  }
+}
+
+#registration_form_plainPassword {
+  div {
+    width: 100%;
+    margin-bottom: 25px;
+    @extend .form__content--input;
+    &:nth-child(1) {
+      flex-direction: column-reverse;
+    }
+  }
+  label {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+// Checkboxes style
+.form__content--checkboxes {
+  padding: 25px 0;
+  &>label {
+    font-size: 18px;
+    @include flex(flex-start, center);
+    @include respond('tabPort') {
+      font-size: 16px;
+    }
+    @include respond('mobileLarge') {
+      font-size: 14px;
+    }
+  }
+  &>div {
+    @include flex(center, center, $dir: row-reverse);
+    .checkbox__rgpd {
+      border: $borderSolidDark;
+      width: 20px;
+      height: 20px;
+      margin-right: 15px;
+    }
+    .required {
+      font-size: 14px;
+      color: $grey;
+    }
+  }
+}

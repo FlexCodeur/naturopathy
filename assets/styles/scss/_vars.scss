@@ -1,0 +1,53 @@
+// FOLDERS DESTINATIONS
+$filePath: "../../fonts/";
+$imgPath: "../../images/";
+
+// COLOR
+
+$primaryColor: #446237;
+$secondaryColor: #db966d;
+$fontColor: #4e4d51;
+$red: #c92626;
+$blue: #48489d;
+$green: #8b9e83;
+$black: #000;
+$dark: #4e4d51;
+$grey: gray;
+$grayLight: #f6f6f6;
+$white: #fff;
+$stone: #f5f6ee;
+$sand: #dfd7c7;
+$beige: #f5f6ee;
+$bgformElements: rgba(192, 192, 192, 0.1);
+$brown: #615231;
+$flash_success: #b5ffb5;
+$flash_warning: #ffecc7;
+$flash_alert: #ffb6b0;
+
+// BORDER SHURTCUT COLORS
+$borderSolidPrimary: 2px solid $primaryColor;
+$borderDashedPrimary: 1px dashed $primaryColor;
+$borderSolidSecondary: 3px solid $secondaryColor;
+$borderDashedSecondary: 1px dashed $secondaryColor;
+$borderSolidDark: 1px solid rgba(128, 128, 128, 0.4);
+$borderSolidDarkNight: 1px solid $dark;
+
+// MARGIN AUTO
+$mxAuto: 0 auto;
+$myAuto: auto 0;
+$mAuto: auto;
+
+// BORDER RADUIS
+$radius5: 5px;
+$radius10: 10px;
+$radius15: 15px;
+$radius20: 20px;
+$radius25: 25px;
+$radius30: 30px;
+$radius35: 35px;
+$radius50: 50px;
+$radius100: 100px;
+
+// LINE-HEIGT
+
+$lineH40: 40px;

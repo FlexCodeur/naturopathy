@@ -1,0 +1,26 @@
+// Login page style
+#login {
+  h1{
+    margin: 60px 0;
+    @include respond('mobileLarge') {
+      margin: 40px 0;
+    }
+  }
+}
+
+.forgot_password {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: $secondaryColor;
+  @include respond('tabPort') {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+  &:hover {
+    color: $green;
+  }
+}

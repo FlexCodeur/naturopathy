@@ -1,0 +1,183 @@
+// MIXIN FONT FAMILY
+@mixin font-face($font-family, $fileName, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+    src: url("#{$filePath}#{$fileName}.ttf") format("truetype");
+  }
+}
+
+// MIXIN FONTS FORMAT
+@mixin font(
+  $family,
+  $size,
+  $align: initial,
+  $txtTransform: initial,
+  $spacing: initial,
+  $color: inherit
+) {
+  font-family: $family;
+  font-size: #{$size}px;
+  @if ($align != initial) {
+    text-align: $align;
+  }
+  @if ($txtTransform != inherit) {
+    text-transform: $txtTransform;
+  }
+  @if ($spacing != initial) {
+    letter-spacing: #{$spacing}px;
+  }
+  @if ($color != inherit) {
+    color: $color;
+  }
+}
+
+// MIXIN PARAGRAPHE
+@mixin paragraphe($fontS, $LineH, $spacingWrd, $color: inherit) {
+  font-size: #{$fontS}px;
+  line-height: #{$LineH}px;
+  word-spacing: #{$spacingWrd}px;
+  @if ($color != inherit) {
+    color: $color;
+  }
+}
+// MIXIN LINE-HEIGT TITLE
+@mixin titleH2($sizeF, $lineHeight: #{$lineH40}) {
+  font-size: #{$sizeF}px;
+  @if ($lineHeight != #{$lineH40}) {
+    line-height: #{$lineHeight};
+  }
+}
+
+// MIXIN FLEXBOX
+@mixin flex($just, $align, $dir: row, $wrap: nowrap) {
+  display: flex;
+  justify-content: $just;
+  align-items: $align;
+  @if ($dir != row) {
+    flex-direction: $dir;
+  }
+  @if ($wrap != nowrap) {
+    flex-wrap: $wrap;
+  }
+}
+
+// MIXINS CONTAINER SIZE
+@mixin containerSize($sizeW, $margin: initial) {
+  width: $sizeW;
+  @if ($margin != initial) {
+    margin: $margin;
+  }
+}
+
+// MIXINS POSITION ABSOLUTE
+@mixin positionTopRight($positionValue, $topValue, $leftValue) {
+  position: $positionValue;
+  top: $topValue;
+  right: $leftValue;
+}
+
+// MIXIN BACKGROUND-IMAGE
+@mixin background($fileName, $pos, $size, $repeat: repeat) {
+  background-image: url("#{$imgPath}#{$fileName}");
+  background-position: $pos;
+  background-size: $size;
+  @if ($repeat != repeat) {
+    background-repeat: $repeat;
+  }
+}
+
+// MIXIN FILTER
+@mixin filter($grayscale, $invert, $contrast) {
+  filter: grayscale($grayscale) invert($invert) contrast($contrast);
+}
+
+// MIXIN BORDER BEFORE TITLE
+@mixin borderTitle($borderW) {
+  content: "";
+  position: absolute;
+  border: 1px solid $primaryColor;
+  width: #{$borderW}px;
+  bottom: 0;
+}
+
+// MIXINS BTN STYLE
+@mixin btnStyle($backgrdColor: initial, $marginX: initial, $cursor: pointer) {
+  background-color: $backgrdColor;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  text-transform: uppercase;
+  @if ($marginX != initial) {
+    margin: $marginX;
+  }
+  @if ($cursor != pointer) {
+    cursor: $cursor;
+  }
+}
+
+// MIXINS BTN STYLE
+@mixin btnColors($btnTheme: true) {
+  @if$btnTheme {
+    background-color: $green;
+    color: $white;
+  } @else {
+    background-color: $secondaryColor;
+    color: $white;
+  }
+}
+
+// MIXIN RESPONSIVE
+@mixin respond($breakpoint) {
+  @if ($breakpoint == "mobileSmall") {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if ($breakpoint == "mobile") {
+    @media (max-width: 489px) {
+      @content;
+    }
+  } @else if ($breakpoint == "mobileLarge") {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if($breakpoint == "tabPort") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if ($breakpoint == "tab") {
+    @media (max-width: 990px) {
+      @content;
+    }
+  } @else if ($breakpoint == "tabLand") {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  } @else if ($breakpoint == "smallLaptop") {
+    @media (max-width: 1220px) {
+      @content;
+    }
+  } @else if ($breakpoint == "laptop") {
+    @media (max-width: 1290px) {
+      @content;
+    }
+  } @else if ($breakpoint == "laptopExtra") {
+    @media (max-width: 1390px) {
+      @content;
+    }
+  } @else if ($breakpoint == "large") {
+    @media (max-width: 1490px) {
+      @content;
+    }
+  } @else if ($breakpoint == "laptopLarge") {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  } @else if ($breakpoint == "extraLarge") {
+    @media (max-width: 1790px) {
+      @content;
+    }
+  }
+}

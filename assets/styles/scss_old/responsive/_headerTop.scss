@@ -1,0 +1,34 @@
+.header__top {
+  @include respond('mobile') {
+    padding: 10px 0;
+  }
+  img {
+    @include respond('mobileLarge') {
+      width: 100px;
+    }
+  }
+  &--content {
+    @include respond('tabLand') {
+      display: block;
+    }
+  }
+}
+
+.header__items {
+  @include respond('tabLand'){
+    justify-content: flex-end;
+  }
+  &:not(:last-child) {
+    @include respond('tabLand') {
+      display: none;
+    }
+  }
+  .fa-2x {
+    @include respond('mobile') {
+      font-size: 1.4em;
+    }
+    @include respond('mobileLarge') {
+      font-size: 1.5em;
+    }
+  }
+}

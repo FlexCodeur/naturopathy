@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Controller\Admin;
+
+use App\Entity\Article;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\SlugField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+
+class ArticleCrudController extends AbstractCrudController
+{
+    public static function getEntityFqcn(): string
+    {
+        return Article::class;
+    }
+
+    public function configureFields(string $pageName): iterable
+    {
+        return [
+            yield TextField::new('title', 'Titre'),
+            yield SlugField::new('slug')->setTargetFieldName('title'),
+            yield AssociationField::new('media'),
+            Yield AssociationField::new('user')->onlyOnDetail(),
+            yield TextareaField::new('description', 'Description courte (160 caractères maximum)'),
+            yield TextEditorField::new("content", 'Contenu de l\'article'),
+            yield AssociationField::new('categories', 'Catégorie'),
+            yield DateTimeField::new('createdAt')->hideOnForm(),
+            yield DateTimeField::new('updatedAt')->hideOnForm()
+
+        ];
+    }
+
+    public function configureCrud(Crud $crud): Crud
+    {
+        return $crud
+            ->showEntityActionsInlined()
+            ->setPageTitle('index', 'Liste des articles')
+            ->setEntityLabelInPlural('un article')
+            ->setEntityLabelInSingular('des articles')
+            ->setPageTitle('new', 'Ajouter un article')
+            ->setPageTitle('edit', 'Modification de l\'article');
+    }
+
+
+}

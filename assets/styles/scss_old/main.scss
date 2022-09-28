@@ -1,0 +1,29 @@
+//Desktop import files
+@import url('../../libs/fontawesome/css/all.css');
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "placeholder";
+@import "utilities";
+@import "headerTop";
+@import "navBar";
+@import "home";
+@import "footer";
+@import "whoIam";
+@import "naturopathy";
+@import "legalNotice";
+@import "forms";
+@import "login";
+@import "registration";
+@import "admin";
+@import "articlesCards";
+@import "articles";
+@import "comment";
+@import "contact";
+
+// Media quieries files import
+@import "responsive/home";
+@import "responsive/headerTop";
+@import "responsive/navBar";
+@import "responsive/registration";
